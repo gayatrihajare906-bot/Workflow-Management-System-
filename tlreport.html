@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports - Team Lead</title>
+<link rel="stylesheet" href="tlreport.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM LEAD</h2>
+  <p>MANAGEMENT PANEL</p>
+
+  <div class="menu-head">REPORTS</div>
+  <div class="menu-item active" id="Team Performance" onclick="filterReport('Team Performance')">📊 Team Performance</div>
+  <div class="menu-item" id="Task Report" onclick="filterReport('Task Report')">📝 Task Report</div>
+  <div class="menu-item" id="Project Progress" onclick="filterReport('Project Progress')">📈 Project Progress</div>
+  <div class="menu-item" id="Overdue Report" onclick="filterReport('Overdue Report')">⚠️ Overdue Report</div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div><h1 id="title">Reports - Team Performance</h1><p class="sub">Detailed analytics and reports</p></div>
+    <button class="new-btn" onclick="exportReport()">📥 Export Report</button>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="card" id="mainCard"></div>
+
+  <div class="grid" id="bottomGrid"></div>
+</div>
+
+<script src="tlreport.js"></script>
+</body>
+</html>

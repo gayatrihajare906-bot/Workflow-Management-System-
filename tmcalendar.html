@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendar - Team Member</title>
+<link rel="stylesheet" href="tmcalendar.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM MEMBER</h2>
+  <p>WORKSPACE</p>
+
+  <div class="menu">📊 Dashboard</div>
+  <div class="menu-head">MY TASKS</div>
+  <div class="menu-item">📋 All Tasks</div>
+
+  <div class="menu-head">MY PROJECTS</div>
+  <div class="menu-item">📁 Assigned Projects</div>
+
+  <div class="menu-head">CALENDAR</div>
+  <div class="menu-item active" id="upcoming" onclick="filterCal('upcoming')">📅 Upcoming Tasks <span id="c-up"></span></div>
+  <div class="menu-item" id="deadlines" onclick="filterCal('deadlines')">⏰ Deadlines <span id="c-dead"></span></div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div>
+      <h1 id="title">Calendar - Upcoming Tasks</h1>
+      <p class="sub">Your schedule and deadlines</p>
+    </div>
+    <button class="new-btn" onclick="addEvent()">+ Add Event</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>Upcoming Tasks</small><h2 id="upCount">0</h2></div>
+    <div class="stat-card"><small>Deadlines This Week</small><h2 id="weekCount">0</h2><div class="bar"><div class="fill orange" id="bar-week"></div></div></div>
+    <div class="stat-card"><small>Overdue</small><h2 id="overCount">0</h2><p style="color:#ef4444;font-size:11px">Needs attention</p></div>
+    <div class="stat-card"><small>Completed This Month</small><h2 id="doneCount">0</h2><div class="bar"><div class="fill green" id="bar-done"></div></div></div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3 id="tableHead">📅 Upcoming Tasks</h3>
+      <div id="calendarBody"></div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>📆 Mini Calendar - Aug 2026</h3>
+        <div class="mini-cal">
+          <div class="cal-head"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+      </div>
+      <div class="card"><h3>⏰ Nearest Deadlines</h3><div id="deadlineSide"></div></div>
+    </div>
+  </div>
+</div>
+
+<script src="tmcalendar.js"></script>
+</body>
+</html>

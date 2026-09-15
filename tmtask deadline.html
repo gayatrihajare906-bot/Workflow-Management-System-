@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Member - Task Deadlines</title>
+<link rel="stylesheet" href="tmtask deadline.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM MEMBER</h2>
+  <p>WORKSPACE</p>
+
+  <div class="menu">📊 Dashboard</div>
+
+  <div class="menu-head">MY TASKS</div>
+  <div class="menu-item active" id="all" onclick="filterTask('all')">📋 All Tasks <span id="c-all"></span></div>
+  <div class="menu-item" id="upcoming" onclick="filterTask('upcoming')">📅 Upcoming <span id="c-up"></span></div>
+  <div class="menu-item" id="deadlines" onclick="filterTask('deadlines')">⏰ Deadlines <span id="c-dead"></span></div>
+  <div class="menu-item" id="overdue" onclick="filterTask('overdue')">🚨 Overdue <span id="c-over"></span></div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div>
+      <h1 id="title">My Task Deadlines</h1>
+      <p class="sub">Track your assigned tasks and deadlines</p>
+    </div>
+    <button class="new-btn" onclick="addTask()">+ Add Task</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>Total Tasks</small><h2 id="totalCount">0</h2></div>
+    <div class="stat-card"><small>Upcoming</small><h2 id="upCount">0</h2><div class="bar"><div class="fill blue"></div></div></div>
+    <div class="stat-card"><small>Overdue</small><h2 id="overCount">0</h2><p style="color:#ef4444;font-size:11px;margin-top:4px">Needs attention</p></div>
+    <div class="stat-card"><small>Completed</small><h2 id="doneCount">0</h2><div class="bar"><div class="fill green" style="width:80%"></div></div></div>
+  </div>
+
+  <div class="card">
+    <h3 id="tableHead">📋 All Assigned Tasks</h3>
+    <div id="taskBody"></div>
+  </div>
+</div>
+
+<script src=".js"></script>
+</body>
+</html>

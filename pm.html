@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Manager Dashboard - Gayatri Chavan</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="Pm.css">
+          <script src="Pm.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Logo / Manager -->
+        <div class="logo-section">
+
+            <div class="logo">
+                GC
+            </div>
+
+            <div class="manager-info">
+                <h2>Project Manager</h2>
+                <p>Gayatri Chavan</p>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+
+            <a href="pm.html" class="nav-item active"
+               data-page="dashboard">
+
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="pmtMYproject.html" class="nav-item"
+               data-page="projects">
+
+                <i class="fa-solid fa-folder-open"></i>
+                <span> My Projects</span>
+
+            </a>
+
+
+            <a href="pmtteam.html" class="nav-item"
+               data-page="team">
+
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Team</span>
+
+            </a>
+
+
+            <a href="pmttask.html" class="nav-item"
+               data-page="task">
+
+                <i class="fa-solid fa-users"></i>
+                <span>Task</span>
+
+            </a>
+
+
+            <a href="pmtcalendar.html" class="nav-item"
+               data-page="tasks">
+
+                <i class="fa-solid fa-list-check"></i>
+                <span>Calendar</span>
+
+            </a>
+
+
+            
+
+            <a href="pmtreport.html" class="nav-item"
+               data-page="reports">
+
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Reports</span>
+
+            </a>
+
+
+            
+
+           
+        </nav>
+
+
+        <!-- Logout -->
+        <div class="logout-section">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button class="mobile-menu"
+                        id="mobileMenu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div>
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Welcome back, Gayatri Chavan
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button class="header-notification"
+                        onclick="showPage('notifications')">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="profile-avatar">
+                        GC
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Gayatri Chavan
+                        </strong>
+
+                        <small>
+                            Project Manager
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             CONTENT
+        ====================================================== -->
+
+        <section class="content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <div class="page active"
+                 id="dashboard">
+
+
+                <!-- Welcome -->
+
+                <div class="welcome-box">
+
+                    <div>
+
+                        <h2>
+                            Good Morning, Gayatri! 👋
+                        </h2>
+
+                        <p>
+                            Here's what's happening with your
+                            projects today.
+                        </p>
+
+                    </div>
+
+
+                    <button class="white-btn"
+                            onclick="showPage('assignment')">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Assign Task
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Statistics -->
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Total Projects</span>
+
+                            <h2>1</h2>
+
+                            <small class="green-text">
+                                +2 this month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-spinner"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Active Projects</span>
+
+                            <h2>1</h2>
+
+                            <small class="blue-text">
+                                Currently active
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Total Tasks</span>
+
+                            <h2>2</h2>
+
+                            <small class="orange-text">
+                                14 pending
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+
+                            <span>Team Members</span>
+
+                            <h2>3</h2>
+
+                            <small class="green-text">
+                                21 active
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Dashboard Cards -->
+
+                <div class="dashboard-row">
+
+
+                    <!-- Project Overview -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    Project Overview
+                                </h3>
+
+                                <p>
+                                    Current project status
+                                </p>
+
+                            </div>
+
+                            <button class="view-btn"
+                                    onclick="showPage('projects')">
+
+                                View All
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="project-overview">
+
+                            <div class="overview-row">
+
+                                <div class="overview-icon blue">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <strong>
+                                        workflow management system
+                                    </strong>
+
+                                    <span>
+                                        -
+                                    </span>
+
+                                </div>
+
+                                <div class="percentage">
+                                10%
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div class="progress blue-progress"
+                                     style="width:78%">
+                                </div>
+
+                            </div>
+
+
+
+                            <!--<div class="overview-row">
+
+                                <div class="overview-icon purple">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <strong>
+                                        Mobile Application
+                                    </strong>
+
+                                    <span>
+                                        Development
+                                    </span>
+
+                                </div>
+
+                                <div class="percentage">
+                                    62%
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div class="progress purple-progress"
+                                     style="width:62%">
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="overview-row">
+
+                                <div class="overview-icon green">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+
+                                <div class="overview-info">
+
+                                    <strong>
+                                        E-Commerce Platform
+                                    </strong>
+
+                                    <span>
+                                        Planning
+                                    </span>
+
+                                </div>
+
+                                <div class="percentage">
+                                    35%
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div class="progress green-progress"
+                                     style="width:35%">
+                                </div>
+
+                            </div>-->
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Recent Tasks -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    Recent Tasks
+                                </h3>
+
+                                <p>
+                                    Latest task updates
+                                </p>
+
+                            </div>
+
+                            <button class="view-btn"
+                                    onclick="showPage('tasks')">
+
+                                View All
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="recent-task">
+
+                            <div class="task-icon blue">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div class="task-info">
+
+                                <strong>
+                                    Homepage Development
+                                </strong>
+
+                                <span>
+                                    Arjun Rao
+                                </span>
+
+                            </div>
+
+                            <span class="status progress-status">
+                                In Progress
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="recent-task">
+
+                            <div class="task-icon purple">
+                                <i class="fa-solid fa-pen"></i>
+                            </div>
+
+                            <div class="task-info">
+
+                                <strong>
+                                    UI Design
+                                </strong>
+
+                                <span>
+                                    Priya Sharma
+                                </span>
+
+                            </div>
+
+                            <span class="status review-status">
+                                Review
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="recent-task">
+
+                            <div class="task-icon orange">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+
+                            <div class="task-info">
+
+                                <strong>
+                                    Database Integration
+                                </strong>
+
+                                <span>
+                                    Rahul Kumar
+                                </span>
+
+                            </div>
+
+                            <span class="status pending-status">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="recent-task">
+
+                            <div class="task-icon green">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+
+                            <div class="task-info">
+
+                                <strong>
+                                    Project Research
+                                </strong>
+
+                                <span>
+                                    Neha Mehta
+                                </span>
+
+                            </div>
+
+                            <span class="status completed-status">
+                                Completed
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Upcoming Deadlines -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Upcoming Project Deadlines
+                            </h3>
+
+                            <p>
+                                Projects approaching their deadlines
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="deadline-grid">
+
+
+                        <div class="deadline-card">
+
+                            <div class="deadline-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <!--<div>
+
+                                <h3>
+                                    Company Website
+                                </h3>
+
+                                <p>
+                                    Deadline: 25 August 2026
+                                </p>
+
+                            </div>
+
+                            <span class="days-left">
+                                7 days
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="deadline-card">
+
+                            <div class="deadline-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Mobile Application
+                                </h3>
+
+                                <p>
+                                    Deadline: 30 August 2026
+                                </p>
+
+                            </div>
+
+                            <span class="days-left">
+                                12 days
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="deadline-card">
+
+                            <div class="deadline-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    E-Commerce Platform
+                                </h3>
+
+                                <p>
+                                    Deadline: 10 September 2026
+                                </p>
+
+                            </div>
+
+                            <span class="days-left">
+                                23 days
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECTS
+            ================================================== -->
+
+            <div class="page" id="projects">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Projects
+                        </h2>
+
+                        <p>
+                            Manage all your projects
+                        </p>
+
+                    </div>
+
+
+                    <button class="primary-btn"
+                            onclick="createProject()">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        New Project
+
+                    </button>
+
+                </div>
+
+
+                <div class="project-grid">
+
+
+                    <div class="project-card">
+
+                        <div class="project-card-top">
+
+                            <div class="project-symbol blue">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <span class="status progress-status">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Company Website
+                        </h3>
+
+                        <p>
+                            Corporate website design and
+                            development project.
+                        </p>
+
+                        <div class="project-info">
+
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                25 Aug 2026
+                            </span>
+
+                            <strong>78%</strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div class="progress blue-progress"
+                                 style="width:78%">
+                            </div>
+
+                        </div>
+
+                        <button class="details-btn"
+                                onclick="showPage('projectDetails')">
+
+                            View Details
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="project-card">
+
+                        <div class="project-card-top">
+
+                            <div class="project-symbol purple">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+
+                            <span class="status progress-status">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Mobile Application
+                        </h3>
+
+                        <p>
+                            Android and iOS application
+                            development project.
+                        </p>
+
+                        <div class="project-info">
+
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                30 Aug 2026
+                            </span>
+
+                            <strong>62%</strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div class="progress purple-progress"
+                                 style="width:62%">
+                            </div>
+
+                        </div>
+
+                        <button class="details-btn"
+                                onclick="showPage('projectDetails')">
+
+                            View Details
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="project-card">
+
+                        <div class="project-card-top">
+
+                            <div class="project-symbol green">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+
+                            <span class="status pending-status">
+                                Planning
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            E-Commerce Platform
+                        </h3>
+
+                        <p>
+                            Online shopping platform
+                            development project.
+                        </p>
+
+                        <div class="project-info">
+
+                            <span>
+                                <i class="fa-solid fa-calendar"></i>
+                                10 Sep 2026
+                            </span>
+
+                            <strong>35%</strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div class="progress green-progress"
+                                 style="width:35%">
+                            </div>
+
+                        </div>
+
+                        <button class="details-btn"
+                                onclick="showPage('projectDetails')">
+
+                            View Details
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECT DETAILS
+            ================================================== -->
+
+            <div class="page" id="projectDetails">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Project Details
+                        </h2>
+
+                        <p>
+                            View detailed project information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="details-layout">
+
+
+                    <div class="card project-detail-card">
+
+                        <div class="detail-header">
+
+                            <div class="project-symbol blue">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Company Website
+                                </h2>
+
+                                <p>
+                                    Website Development Project
+                                </p>
+
+                            </div>
+
+                            <span class="status progress-status">
+                                Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="description">
+
+                            <h3>
+                                Project Description
+                            </h3>
+
+                            <p>
+                                Development of a modern,
+                                responsive company website
+                                with frontend, backend and
+                                database integration.
+                            </p>
+
+                        </div>
+
+
+                        <div class="detail-grid">
+
+                            <div>
+                                <span>Start Date</span>
+                                <strong>01 August 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>Deadline</span>
+                                <strong>25 August 2026</strong>
+                            </div>
+
+                            <div>
+                                <span>Project Manager</span>
+                                <strong>Gayatri Chavan</strong>
+                            </div>
+
+                            <div>
+                                <span>Team Members</span>
+                                <strong>8 Members</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="large-progress">
+
+                            <div class="progress-heading">
+
+                                <span>
+                                    Project Progress
+                                </span>
+
+                                <strong>
+                                    78%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <div class="progress blue-progress"
+                                     style="width:78%">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    Project Team
+                                </h3>
+
+                                <p>
+                                    Assigned members
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="member-line">
+
+                            <div class="small-avatar blue-avatar">
+                                AR
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Arjun Rao
+                                </strong>
+
+                                <span>
+                                    Frontend Developer
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="member-line">
+
+                            <div class="small-avatar purple-avatar">
+                                PS
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Priya Sharma
+                                </strong>
+
+                                <span>
+                                    UI/UX Designer
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="member-line">
+
+                            <div class="small-avatar orange-avatar">
+                                RK
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Rahul Kumar
+                                </strong>
+
+                                <span>
+                                    Backend Developer
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TEAM MEMBERS
+            ================================================== -->
+
+            <div class="page" id="team">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Team Members
+                        </h2>
+
+                        <p>
+                            Manage your project team
+                        </p>
+
+                    </div>
+
+
+                    <button class="primary-btn"
+                            onclick="addMember()">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Add Member
+
+                    </button>
+
+                </div>
+
+
+                <div class="team-grid">
+
+
+                    <div class="member-card">
+
+                        <div class="member-avatar blue-avatar">
+                            AR
+                        </div>
+
+                        <h3>
+                            Arjun Rao
+                        </h3>
+
+                        <p>
+                            Frontend Developer
+                        </p>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="member-card">
+
+                        <div class="member-avatar purple-avatar">
+                            PS
+                        </div>
+
+                        <h3>
+                            Priya Sharma
+                        </h3>
+
+                        <p>
+                            UI/UX Designer
+                        </p>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="member-card">
+
+                        <div class="member-avatar orange-avatar">
+                            RK
+                        </div>
+
+                        <h3>
+                            Rahul Kumar
+                        </h3>
+
+                        <p>
+                            Backend Developer
+                        </p>
+
+                        <span class="offline">
+                            ● Offline
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="member-card">
+
+                        <div class="member-avatar green-avatar">
+                            NM
+                        </div>
+
+                        <h3>
+                            Neha Mehta
+                        </h3>
+
+                        <p>
+                            QA Engineer
+                        </p>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TASKS
+            ================================================== -->
+
+            <div class="page" id="tasks">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Tasks
+                        </h2>
+
+                        <p>
+                            Track and manage project tasks
+                        </p>
+
+                    </div>
+
+
+                    <button class="primary-btn"
+                            onclick="showPage('assignment')">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Assign Task
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-board">
+
+
+                    <div class="task-column">
+
+                        <h3>
+                            Pending
+                            <span>14</span>
+                        </h3>
+
+
+                        <div class="task-box">
+
+                            <strong>
+                                Create Wireframes
+                            </strong>
+
+                            <p>
+                                Priya Sharma
+                            </p>
+
+                            <small>
+                                Due: 20 Aug 2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="task-box">
+
+                            <strong>
+                                API Documentation
+                            </strong>
+
+                            <p>
+                                Arjun Rao
+                            </p>
+
+                            <small>
+                                Due: 22 Aug 2026
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="task-column">
+
+                        <h3>
+                            In Progress
+                            <span>18</span>
+                        </h3>
+
+
+                        <div class="task-box">
+
+                            <strong>
+                                Homepage Development
+                            </strong>
+
+                            <p>
+                                Arjun Rao
+                            </p>
+
+                            <small>
+                                Due: 21 Aug 2026
+                            </small>
+
+                        </div>
+
+
+                        <div class="task-box">
+
+                            <strong>
+                                Database Integration
+                            </strong>
+
+                            <p>
+                                Rahul Kumar
+                            </p>
+
+                            <small>
+                                Due: 24 Aug 2026
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="task-column">
+
+                        <h3>
+                            Completed
+                            <span>32</span>
+                        </h3>
+
+
+                        <div class="task-box completed-box">
+
+                            <strong>
+                                Project Research
+                            </strong>
+
+                            <p>
+                                Neha Mehta
+                            </p>
+
+                            <small>
+                                Completed
+                            </small>
+
+                        </div>
+
+
+                        <div class="task-box completed-box">
+
+                            <strong>
+                                Logo Design
+                            </strong>
+
+                            <p>
+                                Priya Sharma
+                            </p>
+
+                            <small>
+                                Completed
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TASK ASSIGNMENT
+            ================================================== -->
+
+            <div class="page" id="assignment">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Task Assignment
+                        </h2>
+
+                        <p>
+                            Assign tasks to team members
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <form id="assignmentForm">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Task Name
+                            </label>
+
+                            <input type="text"
+                                   id="taskName"
+                                   placeholder="Enter task name"
+                                   required>
+
+                        </div>
+
+
+
+                        <!-- <div class="form-group">
+
+                            <label>
+                                Project
+                            </label>
+
+                            <select required>
+
+                                <option value="">
+                                    Select Project
+                                </option>
+
+                                <option>
+                                    Company Website
+                                </option>
+
+                                <option>
+                                    Mobile Application
+                                </option>
+
+                                <option>
+                                    E-Commerce Platform
+                                </option>
+
+                            </select>
+
+                        </div> -->
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Assign To
+                            </label>
+
+                            <select id="assignMember"
+                                    required>
+
+                                <option value="">
+                                    Select Team Member
+                                </option>
+
+                                <option>
+                                    Arjun Rao
+                                </option>
+
+                                <option>
+                                    Priya Sharma
+                                </option>
+
+                                <option>
+                                    Rahul Kumar
+                                </option>
+
+                                <option>
+                                    Neha Mehta
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="form-row">
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Priority
+                                </label>
+
+                                <select>
+
+                                    <option>
+                                        Low
+                                    </option>
+
+                                    <option selected>
+                                        Medium
+                                    </option>
+
+                                    <option>
+                                        High
+                                    </option>
+
+                                    <option>
+                                        Urgent
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Deadline
+                                </label>
+
+                                <input type="date"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Description
+                            </label>
+
+                            <textarea
+                                placeholder="Enter task description">
+                            </textarea>
+
+                        </div>
+
+
+
+                        <button class="primary-btn"
+                                type="submit">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Assign Task
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REPORTS
+            ================================================== -->
+
+            <div class="page" id="reports">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Reports
+                        </h2>
+
+                        <p>
+                            Project and team performance reports
+                        </p>
+
+                    </div>
+
+
+                    <button class="primary-btn"
+                            onclick="generateReport()">
+
+                        <i class="fa-solid fa-download"></i>
+
+                        Generate Report
+
+                    </button>
+
+                </div>
+
+
+                <div class="report-grid">
+
+
+                    <div class="report-card">
+
+                        <div class="report-icon blue">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <h3>
+                            Project Progress
+                        </h3>
+
+                        <strong>
+                            76%
+                        </strong>
+
+                        <p>
+                            Average project completion
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="report-card">
+
+                        <div class="report-icon green">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <h3>
+                            Completed Tasks
+                        </h3>
+
+                        <strong>
+                            32
+                        </strong>
+
+                        <p>
+                            Tasks completed this month
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="report-card">
+
+                        <div class="report-icon orange">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <h3>
+                            Pending Tasks
+                        </h3>
+
+                        <strong>
+                            14
+                        </strong>
+
+                        <p>
+                            Tasks waiting for completion
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="report-card">
+
+                        <div class="report-icon purple">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <h3>
+                            Team Efficiency
+                        </h3>
+
+                        <strong>
+                            89%
+                        </strong>
+
+                        <p>
+                            Overall team efficiency
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 NOTIFICATIONS
+            ================================================== -->
+
+            <div class="page"
+                 id="notifications">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                        <p>
+                            Latest project updates
+                        </p>
+
+                    </div>
+
+
+                    <button class="view-btn"
+                            onclick="markNotificationsRead()">
+
+                        Mark all as read
+
+                    </button>
+
+                </div>
+
+
+                <div class="notification-list">
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon blue">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Task Submitted
+                            </strong>
+
+                            <p>
+                                Priya Sharma submitted UI Design
+                                for review.
+                            </p>
+
+                            <small>
+                                10 minutes ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon orange">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Project Deadline
+                            </strong>
+
+                            <p>
+                                Company Website deadline is
+                                approaching.
+                            </p>
+
+                            <small>
+                                1 hour ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon green">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Task Completed
+                            </strong>
+
+                            <p>
+                                Arjun Rao completed API
+                                Documentation.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROFILE
+            ================================================== -->
+
+            <div class="page" id="profile">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Profile
+                        </h2>
+
+                        <p>
+                            Manage your profile information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-card">
+
+
+                    <div class="large-profile-avatar">
+
+                        GC
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   value="Gayatri Chavan">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <input type="email"
+                                   value="gayatri.chavan@example.com">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Role
+                            </label>
+
+                            <input type="text"
+                                   value="Project Manager"
+                                   readonly>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Department
+                            </label>
+
+                            <input type="text"
+                                   value="Project Management">
+
+                        </div>
+
+
+
+                        <button class="primary-btn"
+                                type="submit">
+
+                            Save Changes
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Toast -->
+
+<div id="toast"
+     class="toast">
+</div>
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

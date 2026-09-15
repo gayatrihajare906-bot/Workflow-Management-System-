@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Management - Team Lead</title>
+<link rel="stylesheet" href="tlteam management.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM LEAD</h2>
+  <p>MANAGEMENT PANEL</p>
+
+  <div class="menu-head">TASK MANAGEMENT</div>
+  <div class="menu-item active" id="All" onclick="filterTask('All')">📋 All Tasks <span id="c-all"></span></div>
+  <div class="menu-item" id="Assign" style="background:#2563eb;color:white;opacity:1" onclick="assignTask()">➕ Assign Task</div>
+  <div class="menu-item" id="Pending" onclick="filterTask('Pending')">⏳ Pending <span id="c-pending"></span></div>
+  <div class="menu-item" id="Completed" onclick="filterTask('Completed')">✅ Completed <span id="c-completed"></span></div>
+  <div class="menu-item" id="Blocked" onclick="filterTask('Blocked')">🚫 Blocked <span id="c-blocked"></span></div>
+  <div class="menu-item" id="Overdue" onclick="filterTask('Overdue')">⚠️ Overdue <span id="c-overdue"></span></div>
+  <div class="menu-item" id="Review" onclick="filterTask('Review')">👁️ Review <span id="c-review"></span></div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div><h1 id="title">Task Management - All Tasks</h1><p class="sub">Assign and track all team tasks</p></div>
+    <button class="new-btn" onclick="assignTask()">+ Assign New Task</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>Total Tasks</small><h2 id="total">0</h2></div>
+    <div class="stat-card"><small>Pending</small><h2 id="pend">0</h2><div class="bar"><div class="fill orange" id="bar-pend"></div></div></div>
+    <div class="stat-card"><small>Completed</small><h2 id="comp">0</h2><div class="bar"><div class="fill green" id="bar-comp"></div></div></div>
+    <div class="stat-card"><small>Blocked / Overdue</small><h2 id="blockOver" style="color:#ef4444">0 / 0</h2></div>
+  </div>
+
+  <div class="card" id="mainCard"></div>
+
+  <div class="grid">
+    <div class="card"><h3>👥 Tasks by Member</h3><div id="memberTask"></div></div>
+    <div class="card"><h3>📊 Status Overview</h3><div id="statusOver"></div></div>
+  </div>
+</div>
+
+<script src="tlteam management.js"></script>
+</body>
+</html>

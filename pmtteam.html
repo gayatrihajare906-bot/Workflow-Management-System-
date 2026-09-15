@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager - Team</title>
+    <link rel="stylesheet" href="pmtteam.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>TaskFlow</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <h3>Project Manager</h3>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">MY Project</a></li>
+                    <li class="active"><a href="#">Team</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Team Members</h1>
+                <button class="btn-primary" id="add-member-btn">+ Add Member</button>
+            </header>
+
+            <section class="board">
+                <table class="team-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Assigned Task</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="team-list">
+                        <tr>
+                            <td class="member-name"><strong>Gayatri Chavan</strong></td>
+                            <td class="member-role"><span class="role-badge design">UI/UX Designer</span></td>
+                            <td class="member-task">Website Redesign</td>
+                            <td class="actions"><button class="btn-edit">Edit</button><button class="btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name"><strong>Amit Sharma</strong></td>
+                            <td class="member-role"><span class="role-badge dev">Frontend Dev</span></td>
+                            <td class="member-task">Landing Page Development</td>
+                            <td class="actions"><button class="btn-edit">Edit</button><button class="btn-delete">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td class="member-name"><strong>Rahul Patil</strong></td>
+                            <td class="member-role"><span class="role-badge backend">Backend Dev</span></td>
+                            <td class="member-task">API Integration</td>
+                            <td class="actions"><button class="btn-edit">Edit</button><button class="btn-delete">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+<script src="pmtteam.js"></script>
+</body>
+</html>

@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Leader Dashboard - Gayatri Chavan</title>
+
+    <link rel="stylesheet"
+          href="tl.css">
+          <script src="tl.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo-area">
+            <div class="logo">GC</div>
+
+            <div>
+                <h2>Team Leader</h2>
+                <p>Gayatri Chavan</p>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard.html" class="menu-item active" data-page="dashboard">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="tlassigned project.html" class="menu-item" data-page="assigned project">
+                <i class="fa-solid fa-users"></i>
+                <span>assigned project</span>
+            </a>
+
+            <a href="tlteam member.html" class="menu-item" data-page="team member">
+                <i class="fa-solid fa-folder-open"></i>
+                <span>team member</span>
+            </a>
+
+            <a href="tlteam management.html" class="menu-item" data-page="task  management">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Team management</span>
+            </a>
+
+            <a href="tlreport.html" class="menu-item" data-page="report">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>report</span>
+            </a>
+
+            
+           
+
+        </nav>
+
+
+        <div class="logout-area">
+
+            <button id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-title">
+
+                <button id="mobileMenu" class="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h1 id="pageTitle">Dashboard</h1>
+
+                    <p id="pageSubtitle">
+                        Welcome back, Gayatri Chavan!
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="header-profile">
+
+                <button class="notification-btn"
+                        onclick="showPage('notifications')">
+
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+
+                </button>
+
+
+                <div class="user-info">
+
+                    <div class="avatar">
+                        GC
+                    </div>
+
+                    <div>
+                        <strong>Gayatri Chavan</strong>
+                        <small>Team Leader</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGES ================= -->
+
+        <section class="content">
+
+
+            <!-- ================= DASHBOARD ================= -->
+
+            <div class="page active" id="dashboard">
+
+                <div class="welcome-card">
+
+                    <div>
+                        <h2>Hello, Gayatri! 👋</h2>
+
+                        <p>
+                            Manage your team, projects and tasks
+                            from one place.
+                        </p>
+                    </div>
+
+                    <button class="primary-btn"
+                            onclick="showPage('assignTask')">
+
+                        <i class="fa-solid fa-plus"></i>
+                        Assign Task
+
+                    </button>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="stats">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <span>Team Members</span>
+                            <h2>18</h2>
+                            <small class="green-text">
+                                16 active
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+
+                        <div>
+                            <span>Projects</span>
+                            <h2>8</h2>
+                            <small class="blue-text">
+                                6 active
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+
+                        <div>
+                            <span>Total Tasks</span>
+                            <h2>42</h2>
+                            <small class="orange-text">
+                                12 pending
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div>
+                            <span>Team Progress</span>
+                            <h2>78%</h2>
+                            <small class="green-text">
+                                +8% this week
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD ROW -->
+
+                <div class="dashboard-row">
+
+
+                    <!-- TEAM TASKS -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Team Tasks</h3>
+                                <p>Latest team tasks</p>
+                            </div>
+
+                            <button class="link-btn"
+                                    onclick="showPage('teamTasks')">
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div class="task-list">
+
+                            <div class="task">
+
+                                <div class="task-icon blue-bg">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+
+                                <div class="task-detail">
+                                    <strong>Homepage Development</strong>
+                                    <span>Arjun Rao</span>
+                                </div>
+
+                                <label class="status progress">
+                                    In Progress
+                                </label>
+
+                            </div>
+
+
+                            <div class="task">
+
+                                <div class="task-icon purple-bg">
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+
+                                <div class="task-detail">
+                                    <strong>UI Design</strong>
+                                    <span>Priya Sharma</span>
+                                </div>
+
+                                <label class="status review">
+                                    Review
+                                </label>
+
+                            </div>
+
+
+                            <div class="task">
+
+                                <div class="task-icon orange-bg">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+
+                                <div class="task-detail">
+                                    <strong>Database Integration</strong>
+                                    <span>Rahul Kumar</span>
+                                </div>
+
+                                <label class="status pending">
+                                    Pending
+                                </label>
+
+                            </div>
+
+
+                            <div class="task">
+
+                                <div class="task-icon green-bg">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="task-detail">
+                                    <strong>Project Research</strong>
+                                    <span>Neha Mehta</span>
+                                </div>
+
+                                <label class="status completed">
+                                    Completed
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TEAM PROGRESS -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <h3>Team Progress</h3>
+                                <p>Current team performance</p>
+                            </div>
+
+                            <button class="link-btn"
+                                    onclick="showPage('teamProgress')">
+                                Details
+                            </button>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div class="progress-heading">
+                                <span>Overall Progress</span>
+                                <strong>78%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill blue-fill"
+                                     style="width:78%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div class="progress-heading">
+                                <span>Tasks Completed</span>
+                                <strong>68%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill green-fill"
+                                     style="width:68%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-item">
+
+                            <div class="progress-heading">
+                                <span>On-Time Tasks</span>
+                                <strong>91%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill purple-fill"
+                                     style="width:91%">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECTS -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Active Projects</h3>
+                            <p>Current team projects</p>
+                        </div>
+
+                        <button class="link-btn"
+                                onclick="showPage('projects')">
+                            View Projects
+                        </button>
+
+                    </div>
+
+
+                    <div class="project-grid">
+
+                        <div class="project-card">
+
+                            <div class="project-icon blue-bg">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <h3>Company Website</h3>
+
+                            <p>
+                                Website design and development.
+                            </p>
+
+                            <div class="project-progress">
+                                <span>Progress</span>
+                                <strong>75%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill blue-fill"
+                                     style="width:75%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-card">
+
+                            <div class="project-icon purple-bg">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+
+                            <h3>Mobile Application</h3>
+
+                            <p>
+                                Mobile application development.
+                            </p>
+
+                            <div class="project-progress">
+                                <span>Progress</span>
+                                <strong>62%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill purple-fill"
+                                     style="width:62%">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-card">
+
+                            <div class="project-icon green-bg">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+
+                            <h3>E-Commerce Platform</h3>
+
+                            <p>
+                                New online shopping platform.
+                            </p>
+
+                            <div class="project-progress">
+                                <span>Progress</span>
+                                <strong>30%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill green-fill"
+                                     style="width:30%">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TEAM ================= -->
+
+            <div class="page" id="team">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Team</h2>
+                        <p>Manage your team members</p>
+                    </div>
+
+                    <button class="primary-btn"
+                            onclick="addTeamMember()">
+
+                        <i class="fa-solid fa-user-plus"></i>
+                        Add Member
+
+                    </button>
+
+                </div>
+
+
+                <div class="team-grid">
+
+                    <div class="team-member">
+
+                        <div class="member-avatar blue-avatar">
+                            AR
+                        </div>
+
+                        <h3>Arjun Rao</h3>
+                        <p>Frontend Developer</p>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+
+                    </div>
+
+
+                    <div class="team-member">
+
+                        <div class="member-avatar purple-avatar">
+                            PS
+                        </div>
+
+                        <h3>Priya Sharma</h3>
+                        <p>UI/UX Designer</p>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+
+                    </div>
+
+
+                    <div class="team-member">
+
+                        <div class="member-avatar orange-avatar">
+                            RK
+                        </div>
+
+                        <h3>Rahul Kumar</h3>
+                        <p>Backend Developer</p>
+
+                        <span class="offline">
+                            ● Offline
+                        </span>
+
+                    </div>
+
+
+                    <div class="team-member">
+
+                        <div class="member-avatar green-avatar">
+                            NM
+                        </div>
+
+                        <h3>Neha Mehta</h3>
+                        <p>QA Engineer</p>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PROJECTS ================= -->
+
+            <div class="page" id="projects">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Projects</h2>
+                        <p>Monitor team projects</p>
+                    </div>
+
+                    <button class="primary-btn"
+                            onclick="createProject()">
+
+                        <i class="fa-solid fa-plus"></i>
+                        New Project
+
+                    </button>
+
+                </div>
+
+
+                <div class="table-card">
+
+                    <div class="search">
+
+                        <i class="fa-solid fa-search"></i>
+
+                        <input type="text"
+                               id="projectSearch"
+                               placeholder="Search project..."
+                               onkeyup="searchProjects()">
+
+                    </div>
+
+
+                    <table id="projectTable">
+
+                        <thead>
+
+                            <tr>
+                                <th>Project</th>
+                                <th>Team</th>
+                                <th>Deadline</th>
+                                <th>Progress</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Company Website</strong></td>
+                                <td>Development Team</td>
+                                <td>20 Aug 2026</td>
+                                <td>75%</td>
+                                <td>
+                                    <span class="status progress">
+                                        In Progress
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mobile Application</strong></td>
+                                <td>App Team</td>
+                                <td>28 Aug 2026</td>
+                                <td>62%</td>
+                                <td>
+                                    <span class="status progress">
+                                        In Progress
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>E-Commerce Platform</strong></td>
+                                <td>Development Team</td>
+                                <td>10 Sep 2026</td>
+                                <td>30%</td>
+                                <td>
+                                    <span class="status pending">
+                                        Planning
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TEAM TASKS ================= -->
+
+            <div class="page" id="teamTasks">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Team Tasks</h2>
+                        <p>Track all team tasks</p>
+                    </div>
+
+                    <button class="primary-btn"
+                            onclick="showPage('assignTask')">
+
+                        <i class="fa-solid fa-plus"></i>
+                        Assign Task
+
+                    </button>
+
+                </div>
+
+
+                <div class="task-board">
+
+                    <div class="task-column">
+
+                        <h3>
+                            Pending
+                            <span>5</span>
+                        </h3>
+
+                        <div class="task-box">
+
+                            <strong>Create Wireframes</strong>
+
+                            <p>Priya Sharma</p>
+
+                            <small>Due: 20 Aug 2026</small>
+
+                        </div>
+
+
+                        <div class="task-box">
+
+                            <strong>API Documentation</strong>
+
+                            <p>Arjun Rao</p>
+
+                            <small>Due: 23 Aug 2026</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="task-column">
+
+                        <h3>
+                            In Progress
+                            <span>7</span>
+                        </h3>
+
+                        <div class="task-box">
+
+                            <strong>Homepage Development</strong>
+
+                            <p>Arjun Rao</p>
+
+                            <small>Due: 21 Aug 2026</small>
+
+                        </div>
+
+
+                        <div class="task-box">
+
+                            <strong>Database Integration</strong>
+
+                            <p>Rahul Kumar</p>
+
+                            <small>Due: 25 Aug 2026</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="task-column">
+
+                        <h3>
+                            Completed
+                            <span>14</span>
+                        </h3>
+
+                        <div class="task-box completed-box">
+
+                            <strong>Project Research</strong>
+
+                            <p>Neha Mehta</p>
+
+                            <small>Completed</small>
+
+                        </div>
+
+
+                        <div class="task-box completed-box">
+
+                            <strong>Logo Design</strong>
+
+                            <p>Priya Sharma</p>
+
+                            <small>Completed</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ASSIGN TASK ================= -->
+
+            <div class="page" id="assignTask">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Assign Task</h2>
+                        <p>Assign work to your team member</p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <form id="taskForm">
+
+                        <div class="form-group">
+
+                            <label>Task Name</label>
+
+                            <input type="text"
+                                   id="taskName"
+                                   placeholder="Enter task name"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Project</label>
+
+                            <select required>
+
+                                <option value="">
+                                    Select Project
+                                </option>
+
+                                <option>
+                                    Company Website
+                                </option>
+
+                                <option>
+                                    Mobile Application
+                                </option>
+
+                                <option>
+                                    E-Commerce Platform
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Assign To</label>
+
+                            <select id="teamMember" required>
+
+                                <option value="">
+                                    Select Team Member
+                                </option>
+
+                                <option>Arjun Rao</option>
+                                <option>Priya Sharma</option>
+                                <option>Rahul Kumar</option>
+                                <option>Neha Mehta</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label>Priority</label>
+
+                                <select>
+
+                                    <option>Low</option>
+                                    <option selected>Medium</option>
+                                    <option>High</option>
+                                    <option>Urgent</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Deadline</label>
+
+                                <input type="date" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Task Description</label>
+
+                            <textarea
+                                placeholder="Describe the task...">
+                            </textarea>
+
+                        </div>
+
+
+                        <button class="primary-btn"
+                                type="submit">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Assign Task
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TASK REVIEW ================= -->
+
+            <div class="page" id="taskReview">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Task Review</h2>
+                        <p>Review completed team tasks</p>
+                    </div>
+
+                </div>
+
+
+                <div class="review-list">
+
+                    <div class="review-card">
+
+                        <div>
+
+                            <h3>Homepage UI Design</h3>
+
+                            <p>
+                                Submitted by Priya Sharma
+                            </p>
+
+                            <small>
+                                Submitted 2 hours ago
+                            </small>
+
+                        </div>
+
+
+                        <div class="review-buttons">
+
+                            <button class="approve"
+                                    onclick="approveTask(this)">
+
+                                <i class="fa-solid fa-check"></i>
+                                Approve
+
+                            </button>
+
+                            <button class="reject"
+                                    onclick="requestChanges(this)">
+
+                                <i class="fa-solid fa-rotate-left"></i>
+                                Request Changes
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-card">
+
+                        <div>
+
+                            <h3>API Development</h3>
+
+                            <p>
+                                Submitted by Arjun Rao
+                            </p>
+
+                            <small>
+                                Submitted yesterday
+                            </small>
+
+                        </div>
+
+
+                        <div class="review-buttons">
+
+                            <button class="approve"
+                                    onclick="approveTask(this)">
+
+                                <i class="fa-solid fa-check"></i>
+                                Approve
+
+                            </button>
+
+                            <button class="reject"
+                                    onclick="requestChanges(this)">
+
+                                <i class="fa-solid fa-rotate-left"></i>
+                                Request Changes
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TEAM PROGRESS ================= -->
+
+            <div class="page" id="teamProgress">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Team Progress</h2>
+                        <p>Check individual team performance</p>
+                    </div>
+
+                </div>
+
+
+                <div class="member-progress-list">
+
+                    <div class="member-progress">
+
+                        <div class="person">
+
+                            <div class="small-avatar blue-avatar">
+                                AR
+                            </div>
+
+                            <div>
+                                <strong>Arjun Rao</strong>
+                                <span>Frontend Developer</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="person-progress">
+
+                            <div class="progress-heading">
+                                <span>Progress</span>
+                                <strong>88%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill blue-fill"
+                                     style="width:88%">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-progress">
+
+                        <div class="person">
+
+                            <div class="small-avatar purple-avatar">
+                                PS
+                            </div>
+
+                            <div>
+                                <strong>Priya Sharma</strong>
+                                <span>UI/UX Designer</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="person-progress">
+
+                            <div class="progress-heading">
+                                <span>Progress</span>
+                                <strong>92%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill purple-fill"
+                                     style="width:92%">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-progress">
+
+                        <div class="person">
+
+                            <div class="small-avatar orange-avatar">
+                                RK
+                            </div>
+
+                            <div>
+                                <strong>Rahul Kumar</strong>
+                                <span>Backend Developer</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="person-progress">
+
+                            <div class="progress-heading">
+                                <span>Progress</span>
+                                <strong>71%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill orange-fill"
+                                     style="width:71%">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-progress">
+
+                        <div class="person">
+
+                            <div class="small-avatar green-avatar">
+                                NM
+                            </div>
+
+                            <div>
+                                <strong>Neha Mehta</strong>
+                                <span>QA Engineer</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="person-progress">
+
+                            <div class="progress-heading">
+                                <span>Progress</span>
+                                <strong>83%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="fill green-fill"
+                                     style="width:83%">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= NOTIFICATIONS ================= -->
+
+            <div class="page" id="notifications">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Team and project updates</p>
+                    </div>
+
+                    <button class="link-btn"
+                            onclick="markAllRead()">
+                        Mark all as read
+                    </button>
+
+                </div>
+
+
+                <div class="notification-list">
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon blue">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Task submitted</strong>
+
+                            <p>
+                                Priya Sharma submitted UI Design
+                                for review.
+                            </p>
+
+                            <small>
+                                10 minutes ago
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon orange">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <strong>Deadline approaching</strong>
+
+                            <p>
+                                Company Website deadline is
+                                approaching.
+                            </p>
+
+                            <small>
+                                1 hour ago
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon green">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>Task completed</strong>
+
+                            <p>
+                                Arjun Rao completed API
+                                Documentation.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PROFILE ================= -->
+
+            <div class="page" id="profile">
+
+                <div class="page-heading">
+
+                    <div>
+                        <h2>Profile</h2>
+                        <p>Manage your Team Leader profile</p>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="large-avatar">
+                        GC
+                    </div>
+
+
+                    <form id="profileForm">
+
+                        <div class="form-group">
+
+                            <label>Full Name</label>
+
+                            <input type="text"
+                                   value="Gayatri Chavan"
+                                   id="profileName">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Email</label>
+
+                            <input type="email"
+                                   value="gayatri.chavan@example.com">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Role</label>
+
+                            <input type="text"
+                                   value="Team Leader"
+                                   readonly>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Department</label>
+
+                            <input type="text"
+                                   value="Team Management">
+
+                        </div>
+
+
+                        <button type="submit"
+                                class="primary-btn">
+
+                            Save Changes
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- TOAST MESSAGE -->
+
+<div id="toast" class="toast"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

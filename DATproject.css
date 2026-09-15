@@ -1,0 +1,31 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+body { display:flex; background:#f4f6f9; }
+.sidebar { width:240px; background:#226de6; color:white; height:100vh; position:fixed; padding-top:20px; }
+.sidebar h2 { text-align:center; margin-bottom:30px; }
+.sidebar a { display:block; color:white; padding:14px 20px; text-decoration:none; }
+.sidebar a.active { background:#1c68d3; }
+.main { margin-left:240px; padding:20px; width:100%; }
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.btn-create { background:#22c55e; color:white; padding:8px 15px; border:none; border-radius:5px; cursor:pointer; }
+
+table { width:100%; background:white; border-collapse:collapse; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+th, td { padding:13px; text-align:left; border-bottom:1px solid #e5e7eb; }
+th { background:#f1f5f9; }
+
+.progress { width:70px; height:8px; background:#e5e7eb; display:inline-block; border-radius:10px; vertical-align:middle; }
+.fill { height:100%; background:#3b82f6; border-radius:10px; }
+.fill.done { background:#22c55e; }
+
+.status { padding:4px 10px; border-radius:12px; font-size:12px; color:white; }
+.status.Active { background:#3b82f6; }
+.status.Completed { background:#22c55e; }
+
+.btn { padding:5px 9px; border:1px solid #ccc; background:white; border-radius:4px; cursor:pointer; margin-right:3px; }
+.btn.view { border-color:#3b82f6; color:#3b82f6; }
+.btn.edit { border-color:#f59e0b; color:#f59e0b; }
+.btn.delete { border-color:#ef4444; color:#ef4444; }
+
+/* Modal */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center; }
+.modal-content { background:white; padding:20px; border-radius:8px; width:400px; }
+.close { float:right; font-size:20px; cursor:pointer; }

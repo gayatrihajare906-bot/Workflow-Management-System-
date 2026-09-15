@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadline Calendar Dashboard</title>
+    <link rel="stylesheet" href="pmtcalendar.css">
+    <script src="pmtcalendar.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>ScheduleManager</h2>
+            </div>
+            
+            <div class="sidebar-calendar">
+                <div class="calendar-header">
+                    <button class="cal-btn">&lt;</button>
+                    <h3>August 2026</h3>
+                    <button class="cal-btn">&gt;</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="day-name">Su</div><div class="day-name">Mo</div><div class="day-name">Tu</div>
+                    <div class="day-name">We</div><div class="day-name">Th</div><div class="day-name">Fr</div><div class="day-name">Sa</div>
+                    
+                    <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+                    <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+                    <div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div>
+                    <div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div>
+                    <div class="day">9</div><div class="day">10</div><div class="day">11</div><div class="day">12</div>
+                    <div class="day">13</div><div class="day">14</div><div class="day active">15</div><div class="day">16</div>
+                    <div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div>
+                    <div class="day">21</div><div class="day">22</div><div class="day today">23</div><div class="day">24</div>
+                    <div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div>
+                    <div class="day">29</div><div class="day">30</div><div class="day">31</div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#">Upcoming Deadlines</a></li>
+                    <li><a href="#">Past Due</a></li>
+                    <li><a href="#">Calendar Sync</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Upcoming Deadlines</h1>
+                <button class="btn-primary" id="add-deadline-btn">+ Add Deadline</button>
+            </header>
+
+            <section class="board">
+                <table class="deadline-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Month</th>
+                            <th>Work / Task</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="deadline-list">
+                        <tr>
+                            <td class="deadline-date"><span class="date-badge">15</span></td>
+                            <td class="deadline-month">August</td>
+                            <td class="deadline-work">Submit Q3 Financial Report</td>
+                            <td class="actions">
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="deadline-date"><span class="date-badge">23</span></td>
+                            <td class="deadline-month">August</td>
+                            <td class="deadline-work">Finalize Marketing Deck for Campaign Launch</td>
+                            <td class="actions">
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="deadline-date"><span class="date-badge">05</span></td>
+                            <td class="deadline-month">September</td>
+                            <td class="deadline-work">Client Presentation - Acme Corp</td>
+                            <td class="actions">
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{display:flex;background:#f8fafc}
+.sidebar{width:260px;background:#2b74e9;height:100vh;padding:22px;position:fixed;color:white}
+.sidebar h2{font-size:14px;letter-spacing:1px}.sidebar p{font-size:11px;opacity:.5;margin:4px 0 20px}
+.menu{background:#327ce4;padding:10px 12px;border-radius:8px;font-weight:600;font-size:13px;cursor:pointer;margin-bottom:10px}
+.menu-head{font-size:11px;opacity:.4;margin:20px 0 8px;letter-spacing:1px}
+.menu-item{padding:10px 12px;font-size:13px;opacity:.7;cursor:pointer;border-radius:6px;display:flex;justify-content:space-between}
+.menu-item:hover{background:rgba(255,255,255,.1);opacity:1}
+.menu-item.active{background:white;color:#1e293b;opacity:1;font-weight:700}
+.main{margin-left:260px;padding:28px;width:100%}
+.top{display:flex;justify-content:space-between;align-items:center}
+.top h1{font-size:22px;color:#0f172a}.sub{color:#64748b;font-size:13px;margin-top:4px}
+.new-btn{background:#2563eb;color:white;border:none;padding:8px 14px;border-radius:6px;font-size:13px;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}
+.stat-card{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+.stat-card small{color:#64748b;font-size:12px}.stat-card h2{font-size:18px;margin-top:4px}
+.bar{width:100%;height:6px;background:#e2e8f0;border-radius:10px;margin-top:8px}.fill{height:100%;background:#3b82f6;border-radius:10px}.fill.green{background:#22c55e}.fill.orange{background:#f59e0b}
+.card{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:20px}
+table{width:100%;border-collapse:collapse} th{font-size:11px;color:#64748b;text-align:left;padding:12px 10px} td{font-size:13px;padding:12px 10px;border-top:1px solid #f1f5f9}
+.badge{font-size:11px;padding:4px 10px;border-radius:20px;font-weight:600}
+.todo{background:#fef3c7;color:#92400e}.inprogress{background:#dbeafe;color:#1d4ed8}.review{background:#e0e7ff;color:#3730a3}.completed{background:#dcfce7;color:#166534}.overdue{background:#fee2e2;color:#991b1b}
+.high{color:#dc2626;font-size:12px;font-weight:600}.medium{color:#f59e0b;font-size:12px}.low{color:#22c55e;font-size:12px}
+.btn{font-size:11px;padding:4px 8px;border:none;border-radius:4px;cursor:pointer;margin-right:4px}
+.btn-edit{background:#eff6ff;color:#2563eb}.btn-del{background:#fef2f2;color:#dc2626}

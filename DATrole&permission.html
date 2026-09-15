@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Roles & Permissions</title>
+<link rel="stylesheet" href="DATrole&permission.css">
+<script src="DATrole&permission.js"></script>
+</head>
+<body>
+<div class="sidebar">
+  <h2>Workflow</h2>
+  
+  <a class="active">Roles & Permissions</a>
+</div>
+<div class="main">
+  <h1>Role and Permissions</h1>
+  <div class="card">
+    <h3>User Role Management</h3>
+    <table>
+      <thead><tr><th>Name</th><th>Email</th><th>Current Role</th><th>Change Role</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Gayatri chavan</td><td>gayatri@mail.com</td>
+          <td><span class="badge role-pm">Project Manager</span></td>
+          <td><select><option>Admin</option><option selected>Project Manager</option><option>Team Leader</option><option>Team Member</option></select></td>
+          <td><button class="btn btn-green" onclick="saveRole(this)">Save</button></td>
+        </tr>
+        <tr>
+          <td>Priya Patil</td><td>priya@mail.com</td>
+          <td><span class="badge role-leader">Team Leader</span></td>
+          <td><select><option>Admin</option><option>Project Manager</option><option selected>Team Leader</option><option>Team Member</option></select></td>
+          <td><button class="btn btn-green" onclick="saveRole(this)">Save</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

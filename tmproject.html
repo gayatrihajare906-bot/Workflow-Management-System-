@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Projects - Team Member</title>
+<link rel="stylesheet" href="tmproject.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM MEMBER</h2>
+  <p>WORKSPACE</p>
+
+  <div class="menu" onclick="window.location.href='../my-tasks/index.html'">📊 Dashboard</div>
+
+  <div class="menu-head">MY TASKS</div>
+  <div class="menu-item">📋 All Tasks</div>
+
+  <div class="menu-head">MY PROJECTS</div>
+  <div class="menu-item active" onclick="filterProject('All')">📁 Assigned Projects <span id="count-all"></span></div>
+  <div class="menu-item" onclick="filterProject('In Progress')">🔵 Project Progress <span id="count-progress"></span></div>
+  <div class="menu-item" onclick="filterProject('Completed')">✅ Completed <span id="count-done"></span></div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div>
+      <h1 id="title">My Projects - Assigned Projects</h1>
+      <p class="sub">Your assigned projects and progress tracking</p>
+    </div>
+    <button class="new-btn" onclick="addProject()">+ New Project</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>Total Projects</small><h2 id="totalP">0</h2></div>
+    <div class="stat-card"><small>Assigned Projects</small><h2 id="assignedP">0</h2><div class="bar"><div class="fill" id="bar-assigned"></div></div></div>
+    <div class="stat-card"><small>Project Progress</small><h2 id="avgP">0% Avg</h2><div class="bar"><div class="fill green" id="bar-avg"></div></div></div>
+    <div class="stat-card"><small>Completed</small><h2 id="doneP">0</h2><div class="bar"><div class="fill orange" id="bar-done"></div></div></div>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead><tr><th>Project Name</th><th>Progress</th><th>Deadline</th><th>Team</th><th>Status</th><th>Actions</th></tr></thead>
+      <tbody id="projectBody"></tbody>
+    </table>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>Project Progress Overview</h3><div id="progressList"></div></div>
+    <div class="card"><h3>Deadlines</h3><div id="deadlineList"></div></div>
+  </div>
+</div>
+
+<script src="tmproject.js"></script>
+</body>
+</html>

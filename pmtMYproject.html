@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager Dashboard</title>
+    <link rel="stylesheet" href="pmtMYproject.css">
+    <script src="pmtMYproject.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>project Manager</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <h3>Gayatri chavan</h3>
+                <ul>
+                    <li class="active"><a href="#">MY project</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Website Redesign Progress</h1>
+                <button class="btn-primary" id="add-task-btn">+ New Task</button>
+            </header>
+
+            <section class="board">
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Progress</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                        <!-- Task 1 -->
+                        
+                        <!-- Task 2 -->
+                        <tr>
+                            <td>Frontend Development</td>
+                            <td>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 65%;"></div>
+                                </div>
+                                <span class="progress-text">65%</span>
+                            </td>
+                            <td>Sep 10, 2026</td>
+                            <td><span class="badge in-progress">In Progress</span></td>
+                            <td class="actions">
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Task 3 -->
+                        <tr>
+                            <td>Backend API Integration</td>
+                            <td>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                </div>
+                                <span class="progress-text">10%</span>
+                            </td>
+                            <td>Oct 05, 2026</td>
+                            <td><span class="badge pending">Pending</span></td>
+                            <td class="actions">
+                                <button class="btn-edit">Edit</button>
+                                <button class="btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    
+</body>
+</html>

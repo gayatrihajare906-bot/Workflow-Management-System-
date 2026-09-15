@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { display: flex; background: #f4f6f9; }
+
+.sidebar {
+  width: 250px;
+  background: #095bdf;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding-top: 20px;
+}
+.sidebar h2 { text-align: center; margin-bottom: 30px; }
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sidebar a:hover, .sidebar a.active { background: #1768da; }
+
+.main { margin-left: 250px; padding: 25px; width: 100%; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.btn { padding: 10px 16px; border: none; border-radius: 6px; cursor: pointer; color: white; }
+.btn-add { background: #22c55e; }
+.btn-edit { background: #3b82f6; padding: 5px 10px; }
+.btn-delete { background: #2f73d8; padding: 5px 10px; }
+
+table { width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+th { background: #f1f5f9; }
+.status-active { color: #22c55e; font-weight: bold; }
+.status-inactive { color: #1c6be2; font-weight: bold; }

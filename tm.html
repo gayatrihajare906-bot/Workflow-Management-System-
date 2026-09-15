@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Team Member Dashboard</title>
+    <script src="tm.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="tm.css">
+
+    <link rel="stylesheet"
+          href="tm.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Logo -->
+        <div class="logo-section">
+
+            <div class="logo">
+                TM
+            </div>
+
+            <div class="team-info">
+
+                <h2>Team Member</h2>
+
+                <p>Project Management</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Member Switcher -->
+
+        <div class="member-selector">
+
+            <label>Select Member</label>
+
+            <select id="memberSelect">
+
+                <option value="Bhakti Deshmukh">
+                    Bhakti Deshmukh
+                </option>
+
+                <option value="Gayatri Hajare">
+                    Gayatri Hajare
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <a href="tm.html"
+               class="nav-item active"
+               data-page="dashboard">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="tmtasks.html"
+               class="nav-item"
+               data-page="tasks">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <span>Tasks</span>
+
+            </a>
+
+
+            <a href=" tmtask deadline.html"
+               class="nav-item"
+               data-page="deadlines">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <span>Task Deadlines</span>
+
+            </a>
+
+
+            <a href="tmproject.html"
+               class="nav-item"
+               data-page="projects">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span>Projects</span>
+
+            </a>
+
+
+            <a href="tmcalendar.html"
+               class="nav-item"
+               data-page="calendar">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>Calendar</span>
+
+            </a>
+
+
+            <a href="tmnotification.html"
+               class="nav-item"
+               data-page="notifications">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>Notifications</span>
+
+                <span class="notification-count"
+                      id="notificationCount">
+                    3
+                </span>
+
+            </a>
+
+
+            <a href="tmprofile.html"
+               class="nav-item"
+               data-page="profile">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="logout-section">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Header -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button class="mobile-menu"
+                        id="mobileMenu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div>
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Welcome back, Bhakti Deshmukh
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button class="header-notification"
+                        onclick="showPage('notifications')">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+                <div class="profile-mini">
+
+                    <div class="profile-avatar"
+                         id="headerAvatar">
+                        BD
+                    </div>
+
+                    <div>
+
+                        <strong id="headerName">
+                            Bhakti Deshmukh
+                        </strong>
+
+                        <small>
+                            Team Member
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             CONTENT
+        ====================================================== -->
+
+        <section class="content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <div class="page active"
+                 id="dashboard">
+
+
+                <!-- Welcome -->
+
+                <div class="welcome-box">
+
+                    <div>
+
+                        <h2 id="welcomeName">
+                            Welcome back, Bhakti! 👋
+                        </h2>
+
+                        <p>
+                            Here is your work summary for today.
+                        </p>
+
+                    </div>
+
+
+                    <button class="white-btn"
+                            onclick="showPage('tasks')">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        View My Tasks
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- Statistics -->
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>My Tasks</span>
+
+                            <h2>12</h2>
+
+                            <small class="blue-text">
+                                Assigned tasks
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>Pending Tasks</span>
+
+                            <h2>5</h2>
+
+                            <small class="orange-text">
+                                Need attention
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>Completed</span>
+
+                            <h2>7</h2>
+
+                            <small class="green-text">
+                                This month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+
+                            <i class="fa-solid fa-folder"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>Projects</span>
+
+                            <h2>3</h2>
+
+                            <small class="purple-text">
+                                Assigned projects
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Dashboard Row -->
+
+                <div class="dashboard-row">
+
+
+                    <!-- My Tasks -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    My Tasks
+                                </h3>
+
+                                <p>
+                                    Recently assigned tasks
+                                </p>
+
+                            </div>
+
+                            <button class="view-btn"
+                                    onclick="showPage('tasks')">
+
+                                View All
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="recent-task">
+
+                            <div class="task-icon blue">
+
+                                <i class="fa-solid fa-code"></i>
+
+                            </div>
+
+                            <div class="task-info">
+
+                                <strong>
+                                    Homepage Development
+                                </strong>
+
+                                <span>
+                                    Company Website
+                                </span>
+
+                            </div>
+
+                            <span class="status progress-status">
+                                In Progress
+                            </span>
+
+                        </div>
+
+
+                        <div class="recent-task">
+
+                            <div class="task-icon purple">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </div>
+
+                            <div class="task-info">
+
+                                <strong>
+                                    UI Design Review
+                                </strong>
+
+                                <span>
+                                    Mobile Application
+                                </span>
+
+                            </div>
+
+                            <span class="status review-status">
+                                Review
+                            </span>
+
+                        </div>
+
+
+                        <div class="recent-task">
+
+                            <div class="task-icon orange">
+
+                                <i class="fa-solid fa-database"></i>
+
+                            </div>
+
+                            <div class="task-info">
+
+                                <strong>
+                                    Database Testing
+                                </strong>
+
+                                <span>
+                                    E-Commerce Platform
+                                </span>
+
+                            </div>
+
+                            <span class="status pending-status">
+                                Pending
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Upcoming Deadlines -->
+
+                    <div class="card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    Upcoming Deadlines
+                                </h3>
+
+                                <p>
+                                    Your next task deadlines
+                                </p>
+
+                            </div>
+
+                            <button class="view-btn"
+                                    onclick="showPage('deadlines')">
+
+                                View All
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="deadline-item">
+
+                            <div class="date-box">
+
+                                <strong>
+                                    20
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+
+                            </div>
+
+                            <div class="deadline-info">
+
+                                <strong>
+                                    Create Wireframes
+                                </strong>
+
+                                <span>
+                                    Mobile Application
+                                </span>
+
+                            </div>
+
+                            <span class="urgent">
+                                2 days
+                            </span>
+
+                        </div>
+
+
+                        <div class="deadline-item">
+
+                            <div class="date-box">
+
+                                <strong>
+                                    23
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+
+                            </div>
+
+                            <div class="deadline-info">
+
+                                <strong>
+                                    API Integration
+                                </strong>
+
+                                <span>
+                                    Company Website
+                                </span>
+
+                            </div>
+
+                            <span class="normal">
+                                5 days
+                            </span>
+
+                        </div>
+
+
+                        <div class="deadline-item">
+
+                            <div class="date-box">
+
+                                <strong>
+                                    28
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+
+                            </div>
+
+                            <div class="deadline-info">
+
+                                <strong>
+                                    Testing
+                                </strong>
+
+                                <span>
+                                    E-Commerce Platform
+                                </span>
+
+                            </div>
+
+                            <span class="normal">
+                                10 days
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Project Progress -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                My Project Progress
+                            </h3>
+
+                            <p>
+                                Progress of your assigned projects
+                            </p>
+
+                        </div>
+
+                        <button class="view-btn"
+                                onclick="showPage('projects')">
+
+                            View Projects
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="project-progress-row">
+
+                        <div class="project-progress-info">
+
+                            <div class="project-icon blue">
+
+                                <i class="fa-solid fa-globe"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Company Website
+                                </strong>
+
+                                <span>
+                                    78% completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            78%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div class="progress blue-progress"
+                             style="width:78%">
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-progress-row">
+
+                        <div class="project-progress-info">
+
+                            <div class="project-icon purple">
+
+                                <i class="fa-solid fa-mobile-screen"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Mobile Application
+                                </strong>
+
+                                <span>
+                                    62% completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            62%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div class="progress purple-progress"
+                             style="width:62%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TASKS
+            ================================================== -->
+
+            <div class="page"
+                 id="tasks">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            My Tasks
+                        </h2>
+
+                        <p>
+                            View and manage your assigned tasks
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="task-filters">
+
+                    <button class="filter-btn active"
+                            onclick="filterTasks('all', this)">
+                        All
+                    </button>
+
+                    <button class="filter-btn"
+                            onclick="filterTasks('pending', this)">
+                        Pending
+                    </button>
+
+                    <button class="filter-btn"
+                            onclick="filterTasks('progress', this)">
+                        In Progress
+                    </button>
+
+                    <button class="filter-btn"
+                            onclick="filterTasks('completed', this)">
+                        Completed
+                    </button>
+
+                </div>
+
+
+                <div class="task-list"
+                     id="taskList">
+
+
+                    <div class="task-row"
+                         data-status="progress">
+
+                        <div class="task-check blue">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <div class="task-details">
+
+                            <strong>
+                                Homepage Development
+                            </strong>
+
+                            <span>
+                                Company Website
+                            </span>
+
+                        </div>
+
+                        <div class="task-deadline">
+
+                            <small>Deadline</small>
+
+                            <strong>
+                                23 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="status progress-status">
+                            In Progress
+                        </span>
+
+                        <button class="action-btn"
+                                onclick="completeTask(this)">
+
+                            Complete
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="task-row"
+                         data-status="pending">
+
+                        <div class="task-check purple">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </div>
+
+                        <div class="task-details">
+
+                            <strong>
+                                Create Wireframes
+                            </strong>
+
+                            <span>
+                                Mobile Application
+                            </span>
+
+                        </div>
+
+                        <div class="task-deadline">
+
+                            <small>Deadline</small>
+
+                            <strong>
+                                20 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="status pending-status">
+                            Pending
+                        </span>
+
+                        <button class="action-btn"
+                                onclick="completeTask(this)">
+
+                            Complete
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="task-row"
+                         data-status="completed">
+
+                        <div class="task-check green">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <div class="task-details">
+
+                            <strong>
+                                Project Research
+                            </strong>
+
+                            <span>
+                                Company Website
+                            </span>
+
+                        </div>
+
+                        <div class="task-deadline">
+
+                            <small>Completed</small>
+
+                            <strong>
+                                18 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="status completed-status">
+                            Completed
+                        </span>
+
+                        <button class="action-btn disabled"
+                                disabled>
+
+                            Done
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="task-row"
+                         data-status="progress">
+
+                        <div class="task-check orange">
+
+                            <i class="fa-solid fa-database"></i>
+
+                        </div>
+
+                        <div class="task-details">
+
+                            <strong>
+                                Database Testing
+                            </strong>
+
+                            <span>
+                                E-Commerce Platform
+                            </span>
+
+                        </div>
+
+                        <div class="task-deadline">
+
+                            <small>Deadline</small>
+
+                            <strong>
+                                28 Aug 2026
+                            </strong>
+
+                        </div>
+
+                        <span class="status progress-status">
+                            In Progress
+                        </span>
+
+                        <button class="action-btn"
+                                onclick="completeTask(this)">
+
+                            Complete
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DEADLINES
+            ================================================== -->
+
+            <div class="page"
+                 id="deadlines">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Task Deadlines
+                        </h2>
+
+                        <p>
+                            Keep track of your upcoming deadlines
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="deadline-grid-large">
+
+
+                    <div class="deadline-card-large urgent-card">
+
+                        <div class="deadline-date">
+
+                            <strong>
+                                20
+                            </strong>
+
+                            <span>
+                                AUG
+                            </span>
+
+                        </div>
+
+                        <div class="deadline-content">
+
+                            <h3>
+                                Create Wireframes
+                            </h3>
+
+                            <p>
+                                Mobile Application
+                            </p>
+
+                            <div class="deadline-progress">
+
+                                <div class="progress"
+                                     style="width:75%">
+                                </div>
+
+                            </div>
+
+                            <small>
+                                75% completed
+                            </small>
+
+                        </div>
+
+                        <div class="days">
+
+                            <strong>
+                                2
+                            </strong>
+
+                            <span>
+                                DAYS LEFT
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="deadline-card-large">
+
+                        <div class="deadline-date">
+
+                            <strong>
+                                23
+                            </strong>
+
+                            <span>
+                                AUG
+                            </span>
+
+                        </div>
+
+                        <div class="deadline-content">
+
+                            <h3>
+                                Homepage Development
+                            </h3>
+
+                            <p>
+                                Company Website
+                            </p>
+
+                            <div class="deadline-progress">
+
+                                <div class="progress"
+                                     style="width:60%">
+                                </div>
+
+                            </div>
+
+                            <small>
+                                60% completed
+                            </small>
+
+                        </div>
+
+                        <div class="days">
+
+                            <strong>
+                                5
+                            </strong>
+
+                            <span>
+                                DAYS LEFT
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="deadline-card-large">
+
+                        <div class="deadline-date">
+
+                            <strong>
+                                28
+                            </strong>
+
+                            <span>
+                                AUG
+                            </span>
+
+                        </div>
+
+                        <div class="deadline-content">
+
+                            <h3>
+                                Database Testing
+                            </h3>
+
+                            <p>
+                                E-Commerce Platform
+                            </p>
+
+                            <div class="deadline-progress">
+
+                                <div class="progress"
+                                     style="width:40%">
+                                </div>
+
+                            </div>
+
+                            <small>
+                                40% completed
+                            </small>
+
+                        </div>
+
+                        <div class="days">
+
+                            <strong>
+                                10
+                            </strong>
+
+                            <span>
+                                DAYS LEFT
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECTS
+            ================================================== -->
+
+            <div class="page"
+                 id="projects">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            My Projects
+                        </h2>
+
+                        <p>
+                            Projects assigned to you
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-grid">
+
+
+                    <div class="project-card">
+
+                        <div class="project-card-top">
+
+                            <div class="project-icon blue">
+
+                                <i class="fa-solid fa-globe"></i>
+
+                            </div>
+
+                            <span class="status progress-status">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Company Website
+                        </h3>
+
+                        <p>
+                            Development of the company
+                            website and dashboard.
+                        </p>
+
+                        <div class="project-info">
+
+                            <span>
+                                Deadline:
+                                25 Aug 2026
+                            </span>
+
+                            <strong>
+                                78%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div class="progress blue-progress"
+                                 style="width:78%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-card">
+
+                        <div class="project-card-top">
+
+                            <div class="project-icon purple">
+
+                                <i class="fa-solid fa-mobile-screen"></i>
+
+                            </div>
+
+                            <span class="status progress-status">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Mobile Application
+                        </h3>
+
+                        <p>
+                            Android and iOS mobile
+                            application development.
+                        </p>
+
+                        <div class="project-info">
+
+                            <span>
+                                Deadline:
+                                30 Aug 2026
+                            </span>
+
+                            <strong>
+                                62%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div class="progress purple-progress"
+                                 style="width:62%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-card">
+
+                        <div class="project-card-top">
+
+                            <div class="project-icon green">
+
+                                <i class="fa-solid fa-cart-shopping"></i>
+
+                            </div>
+
+                            <span class="status pending-status">
+                                Planning
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            E-Commerce Platform
+                        </h3>
+
+                        <p>
+                            Online shopping platform
+                            development.
+                        </p>
+
+                        <div class="project-info">
+
+                            <span>
+                                Deadline:
+                                10 Sep 2026
+                            </span>
+
+                            <strong>
+                                35%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div class="progress green-progress"
+                                 style="width:35%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CALENDAR
+            ================================================== -->
+
+            <div class="page"
+                 id="calendar">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Calendar
+                        </h2>
+
+                        <p>
+                            View your task schedule
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="calendar-card">
+
+                    <div class="calendar-header">
+
+                        <button onclick="changeMonth(-1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+
+                        <h2 id="calendarMonth">
+                            August 2026
+                        </h2>
+
+                        <button onclick="changeMonth(1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="weekdays">
+
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+
+                    </div>
+
+
+                    <div class="calendar-days"
+                         id="calendarDays">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 NOTIFICATIONS
+            ================================================== -->
+
+            <div class="page"
+                 id="notifications">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            Notifications
+                        </h2>
+
+                        <p>
+                            Your latest project updates
+                        </p>
+
+                    </div>
+
+                    <button class="view-btn"
+                            onclick="markNotificationsRead()">
+
+                        Mark all as read
+
+                    </button>
+
+                </div>
+
+
+                <div class="notification-list">
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon blue">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                New Task Assigned
+                            </strong>
+
+                            <p>
+                                You have been assigned
+                                "Create Wireframes".
+                            </p>
+
+                            <small>
+                                10 minutes ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon orange">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Deadline Reminder
+                            </strong>
+
+                            <p>
+                                Create Wireframes is due
+                                in 2 days.
+                            </p>
+
+                            <small>
+                                1 hour ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="notification unread">
+
+                        <div class="notification-icon green">
+
+                            <i class="fa-solid fa-message"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Project Manager Message
+                            </strong>
+
+                            <p>
+                                Your project manager sent
+                                you a new message.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification">
+
+                        <div class="notification-icon purple">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Task Completed
+                            </strong>
+
+                            <p>
+                                Project Research was marked
+                                as completed.
+                            </p>
+
+                            <small>
+                                2 days ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROFILE
+            ================================================== -->
+
+            <div class="page"
+                 id="profile">
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h2>
+                            My Profile
+                        </h2>
+
+                        <p>
+                            Manage your personal information
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-card">
+
+
+                    <div class="large-profile-avatar"
+                         id="profileAvatar">
+                        BD
+                    </div>
+
+
+                    <form id="profileForm">
+
+                        <div class="form-group">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   id="profileName"
+                                   value="Bhakti Deshmukh"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <input type="email"
+                                   value="bhakti@example.com"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Role
+                            </label>
+
+                            <input type="text"
+                                   value="Team Member"
+                                   readonly>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Department
+                            </label>
+
+                            <input type="text"
+                                   value="Development"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Phone Number
+                            </label>
+
+                            <input type="text"
+                                   value="+91 98765 43210">
+
+                        </div>
+
+
+                        <button class="primary-btn"
+                                type="submit">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Save Changes
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Toast -->
+
+<div class="toast"
+     id="toast">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

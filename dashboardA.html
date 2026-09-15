@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavya Jain - Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboardA.css">
+    <link href="A.css" rel="stylesheet">
+    <script src="A.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">KJ</div>
+            <div>
+                <h2>Admin Panel</h2>
+                <span>Kavya Jain</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboardA.html" class="menu-item active" data-page="dashboard">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="DATuser.html" class="menu-item" data-page="user">
+                <i class="fa-solid fa-folder"></i>
+                <span>user</span>
+            </a>
+
+            <a href="DATrole&permission.html" class="menu-item" data-page="role and permissions">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Role and Permissions</span>
+            </a>
+
+            <a href="DATproject.html" class="menu-item" data-page="projects">
+                <i class="fa-solid fa-users"></i>
+                <span>Projects</span>
+            </a>
+
+            <a href="DATtasks.html" class="menu-item" data-page="tasks">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Tasks</span>
+            </a>
+
+            <a href="DATreport.html" class="menu-item" data-page="reports">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="DATnotification.html" class="menu-item" data-page="notifications">
+                <i class="fa-solid fa-bell"></i>
+                <span>Notifications</span>
+                <span class="notification-count">3</span>
+            </a>
+
+            <a href="DATprofile.html" class="menu-item" data-page="profile">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div>
+                <button class="mobile-menu" id="mobileMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h1 id="pageTitle">Dashboard</h1>
+                <p id="pageSubtitle">Welcome back, Kavya Jain!</p>
+            </div>
+
+            <div class="header-right">
+
+                <button class="icon-button" id="notificationBtn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="red-dot">3</span>
+                </button>
+
+                <div class="admin-profile">
+                    <div class="profile-avatar">KJ</div>
+                    <div>
+                        <strong>Kavya Jain</strong>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Pages -->
+        <section class="content">
+
+
+            <!-- Dashboard Page -->
+            <div class="page active-page" id="dashboard">
+
+                <div class="welcome-box">
+                    <div>
+                        <h2>Good Evening, Kavya! 👋</h2>
+                        <p>Here is what's happening with your projects today.</p>
+                    </div>
+
+                    <button class="primary-btn" onclick="showPage('projects')">
+                        <i class="fa-solid fa-plus"></i>
+                        New Project
+                    </button>
+                </div>
+
+
+                <!-- Statistics -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div>
+                            <span>Total Projects</span>
+                            <h2>1</h2>
+                            <small class="green-text">
+                                <i class="fa-solid fa-arrow-up"></i> 10% this month
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div>
+                            <span>Upcoming Deadlines</span>
+                            <h2>-</h2>
+                            <small class="orange-text">This week</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <span>Team Members</span>
+                            <h2>3</h2>
+                            <small class="green-text">3 new members</small>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <div>
+                            <span>Pending Tasks</span>
+                            <h2>-</h2>
+                            <small class="red-text">5 overdue</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <!-- Recent Projects -->
+                    <div class="card">
+
+                        <div class="card-header">
+                            <div>
+                                <h3>Recent Projects</h3>
+                                <p>Your latest projects</p>
+                            </div>
+
+                            <button class="text-btn" onclick="showPage('projects')">
+                                View All
+                            </button>
+                        </div>
+
+                        <div class="project-list">
+
+                            <div class="project-row">
+                                <div class="project-icon purple-bg">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                </div>
+
+                                <div class="project-info">
+                                    <strong>workflow management system</strong>
+                                    <span>Development Team</span>
+                                </div>
+
+                                <span class="status in progress">in progress</span>
+                            </div>
+
+                           
+                            
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Deadlines -->
+                    <div class="card">
+
+                        <div class="card-header">
+                            <div>
+                                <h3>Upcoming Deadlines</h3>
+                                <p>Important project dates</p>
+                            </div>
+
+                            <button class="text-btn" onclick="showPage('deadlines')">
+                                View All
+                            </button>
+                        </div>
+
+                        <div class="deadline-list">
+
+                            <div class="deadline">
+                                <div class="date-box">
+                                    <strong>15</strong>
+                                    <span>AUG</span>
+                                </div>
+
+                                <div>
+                                    <strong>Website login page</strong>
+                                    <span>2 days required</span>
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+
+                            <div class="deadline">
+                                <div class="date-box">
+                                    <strong>19</strong>
+                                    <span>AUG</span>
+                                </div>
+
+                                <div>
+                                    <strong>website dashboard</strong>
+                                    <span>2 days required</span>
+                                </div>
+
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Task Progress -->
+                <div class="card task-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h3>Task Overview</h3>
+                            <p>Current task progress</p>
+                        </div>
+
+                        <button class="text-btn" onclick="showPage('tasks')">
+                            Manage Tasks
+                        </button>
+                    </div>
+
+                    <div class="task-progress">
+
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Completed</span>
+                                <strong>10%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill completed-fill" style="width:10%"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>In Progress</span>
+                                <strong>22%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill progress-fill-blue" style="width:22%"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Pending</span>
+                                <strong>68%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill pending-fill" style="width:68%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Projects Page -->
+            <div class="page" id="projects">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Projects</h2>
+                        <p>Manage all your projects</p>
+                    </div>
+
+                    <button class="primary-btn" onclick="addProject()">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Project
+                    </button>
+                </div>
+
+                <div class="table-card">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" id="projectSearch"
+                               placeholder="Search projects..."
+                               onkeyup="searchProjects()">
+                    </div>
+
+                    <table id="projectTable">
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Team</th>
+                                <th>Deadline</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><strong>Company Website</strong></td>
+                                <td>Design Team</td>
+                                <td>20 Aug 2026</td>
+                                <td><span class="status progress">In Progress</span></td>
+                                <td>75%</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mobile App Development</strong></td>
+                                <td>Development</td>
+                                <td>15 Aug 2026</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td>100%</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>E-Commerce Platform</strong></td>
+                                <td>Development</td>
+                                <td>30 Aug 2026</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>25%</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Marketing Campaign</strong></td>
+                                <td>Marketing</td>
+                                <td>27 Aug 2026</td>
+                                <td><span class="status progress">In Progress</span></td>
+                                <td>55%</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- Deadlines Page -->
+            <div class="page" id="deadlines">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Project Deadlines</h2>
+                        <p>Track upcoming project deadlines</p>
+                    </div>
+                </div>
+
+                <div class="deadline-grid">
+
+                    <div class="deadline-card urgent">
+                        <div class="deadline-date">
+                            <strong>20</strong>
+                            <span>AUG</span>
+                        </div>
+
+                        <div>
+                            <h3>Company Website</h3>
+                            <p>UI Design completion</p>
+                            <span class="deadline-warning">2 days remaining</span>
+                        </div>
+                    </div>
+
+                    <div class="deadline-card">
+                        <div class="deadline-date">
+                            <strong>23</strong>
+                            <span>AUG</span>
+                        </div>
+
+                        <div>
+                            <h3>Mobile App</h3>
+                            <p>Testing phase</p>
+                            <span>5 days remaining</span>
+                        </div>
+                    </div>
+
+                    <div class="deadline-card">
+                        <div class="deadline-date">
+                            <strong>27</strong>
+                            <span>AUG</span>
+                        </div>
+
+                        <div>
+                            <h3>Marketing Campaign</h3>
+                            <p>Final report</p>
+                            <span>9 days remaining</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Team Page -->
+            <div class="page" id="team">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Team Members</h2>
+                        <p>Manage your team</p>
+                    </div>
+
+                    <button class="primary-btn" onclick="addMember()">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Add Member
+                    </button>
+                </div>
+
+                <div class="team-grid">
+
+                    <div class="team-card">
+                        <div class="member-avatar blue-avatar">AR</div>
+                        <h3>Arjun Rao</h3>
+                        <p>Frontend Developer</p>
+                        <span class="online">● Online</span>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="member-avatar purple-avatar">PS</div>
+                        <h3>Priya Sharma</h3>
+                        <p>UI/UX Designer</p>
+                        <span class="online">● Online</span>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="member-avatar orange-avatar">RK</div>
+                        <h3>Rahul Kumar</h3>
+                        <p>Backend Developer</p>
+                        <span class="offline">● Offline</span>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="member-avatar green-avatar">NM</div>
+                        <h3>Neha Mehta</h3>
+                        <p>Project Manager</p>
+                        <span class="online">● Online</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tasks Page -->
+            <div class="page" id="tasks">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Tasks</h2>
+                        <p>Manage and track team tasks</p>
+                    </div>
+
+                    <button class="primary-btn" onclick="addTask()">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Task
+                    </button>
+                </div>
+
+                <div class="task-board">
+
+                    <div class="task-column">
+                        <h3>Pending <span>3</span></h3>
+
+                        <div class="task-item">
+                            <strong>Create wireframes</strong>
+                            <p>Company Website</p>
+                            <small>Due: Aug 20</small>
+                        </div>
+
+                        <div class="task-item">
+                            <strong>Write API documentation</strong>
+                            <p>Mobile App</p>
+                            <small>Due: Aug 22</small>
+                        </div>
+                    </div>
+
+                    <div class="task-column">
+                        <h3>In Progress <span>4</span></h3>
+
+                        <div class="task-item">
+                            <strong>Develop homepage</strong>
+                            <p>Company Website</p>
+                            <small>Due: Aug 21</small>
+                        </div>
+
+                        <div class="task-item">
+                            <strong>Database integration</strong>
+                            <p>E-Commerce</p>
+                            <small>Due: Aug 24</small>
+                        </div>
+                    </div>
+
+                    <div class="task-column">
+                        <h3>Completed <span>8</span></h3>
+
+                        <div class="task-item completed-task">
+                            <strong>Project research</strong>
+                            <p>Marketing Campaign</p>
+                            <small>Completed</small>
+                        </div>
+
+                        <div class="task-item completed-task">
+                            <strong>Logo design</strong>
+                            <p>Company Website</p>
+                            <small>Completed</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Reports Page -->
+            <div class="page" id="reports">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Reports</h2>
+                        <p>View project and team performance</p>
+                    </div>
+
+                    <button class="primary-btn" onclick="generateReport()">
+                        <i class="fa-solid fa-download"></i>
+                        Generate Report
+                    </button>
+                </div>
+
+                <div class="report-grid">
+
+                    <div class="report-card">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <h3>Project Performance</h3>
+                        <p>View overall project completion and progress.</p>
+                        <button>View Report</button>
+                    </div>
+
+                    <div class="report-card">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Team Performance</h3>
+                        <p>Analyze team productivity and completed tasks.</p>
+                        <button>View Report</button>
+                    </div>
+
+                    <div class="report-card">
+                        <i class="fa-solid fa-clock"></i>
+                        <h3>Deadline Report</h3>
+                        <p>Track upcoming and missed deadlines.</p>
+                        <button>View Report</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Notifications Page -->
+            <div class="page" id="notifications">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Stay updated with your team and projects</p>
+                    </div>
+
+                    <button class="text-btn" onclick="markNotifications()">
+                        Mark all as read
+                    </button>
+                </div>
+
+                <div class="notification-list">
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon blue">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>New task assigned</strong>
+                            <p>Arjun has completed the homepage task.</p>
+                            <small>10 minutes ago</small>
+                        </div>
+                    </div>
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon orange">
+                            <i class="fa-solid fa-calendar"></i>
+                        </div>
+
+                        <div>
+                            <strong>Deadline approaching</strong>
+                            <p>Company Website deadline is in 2 days.</p>
+                            <small>1 hour ago</small>
+                        </div>
+                    </div>
+
+                    <div class="notification-item unread">
+                        <div class="notification-icon green">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <div>
+                            <strong>New team member</strong>
+                            <p>Neha Mehta joined your team.</p>
+                            <small>Yesterday</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Profile Page -->
+            <div class="page" id="profile">
+
+                <div class="page-heading">
+                    <div>
+                        <h2>Admin Profile</h2>
+                        <p>Manage your account information</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+
+                    <div class="large-avatar">KJ</div>
+
+                    <div class="profile-details">
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="Kavya Jain">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="kavya.jain@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Role</label>
+                            <input type="text" value="Administrator" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Department</label>
+                            <input type="text" value="Management">
+                        </div>
+
+                        <button class="primary-btn" onclick="saveProfile()">
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

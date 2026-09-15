@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Members - Team Lead</title>
+<link rel="stylesheet" href="tlteam member.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM LEAD</h2>
+  <p>MANAGEMENT PANEL</p>
+
+  <div class="menu-head">TEAM MEMBERS</div>
+  <div class="menu-item active" id="list" onclick="filterTeam('List')">📋 Member List <span id="c-list"></span></div>
+  <div class="menu-item" id="tasks" onclick="filterTeam('Tasks')">📝 Assigned Tasks <span id="c-tasks"></span></div>
+  <div class="menu-item" id="performance" onclick="filterTeam('Performance')">⭐ Performance <span id="c-perf"></span></div>
+  <div class="menu-item" id="status" onclick="filterTeam('Status')">💼 Work Status <span id="c-status"></span></div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div><h1 id="title">Team Members - Member List</h1><p class="sub">Monitor team performance and workload</p></div>
+    <button class="new-btn" onclick="addMember()">+ Add Member</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>Total Members</small><h2 id="totalM">0</h2></div>
+    <div class="stat-card"><small>Assigned Tasks</small><h2 id="totalT">0 Tasks</h2><div class="bar"><div class="fill orange" id="bar-task"></div></div></div>
+    <div class="stat-card"><small>Avg Performance</small><h2 id="avgP">0%</h2><div class="bar"><div class="fill green" id="bar-perf"></div></div></div>
+    <div class="stat-card"><small>Active / On Leave</small><h2 id="activeC">0 / 0</h2></div>
+  </div>
+
+  <div class="card" id="mainCard"></div>
+
+  <div class="grid">
+    <div class="card"><h3>⭐ Performance Overview</h3><div id="perfList"></div></div>
+    <div class="card"><h3>💼 Work Status</h3><div id="statusList"></div></div>
+  </div>
+</div>
+
+<script src="tlteam member.js"></script>
+</body>
+</html>

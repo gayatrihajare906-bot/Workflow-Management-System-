@@ -1,0 +1,29 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{display:flex;background:#f8fafc}
+.sidebar{width:260px;background:#2d74e7;height:100vh;padding:22px;position:fixed;color:white}
+.sidebar h2{font-size:14px}.sidebar p{font-size:11px;opacity:.5;margin:4px 0 20px}
+.menu{background:#2970d4;padding:10px 12px;border-radius:8px;font-weight:600;font-size:13px;margin-bottom:10px}
+.menu-head{font-size:11px;opacity:.4;margin:20px 0 8px;letter-spacing:1px}
+.menu-item{padding:10px 12px;font-size:13px;opacity:.7;cursor:pointer;border-radius:6px;display:flex;justify-content:space-between}
+.menu-item:hover{background:rgba(255,255,255,.1);opacity:1}
+.menu-item.active{background:white;color:#1e293b;opacity:1;font-weight:700}
+.main{margin-left:260px;padding:28px;width:100%}
+.top{display:flex;justify-content:space-between;align-items:center}
+.top h1{font-size:22px;color:#0f172a}.sub{color:#64748b;font-size:13px;margin-top:4px}
+.new-btn{background:#2563eb;color:white;border:none;padding:8px 14px;border-radius:6px;font-size:13px;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}
+.stat-card{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+.stat-card small{color:#64748b;font-size:12px}.stat-card h2{font-size:18px;margin-top:4px}
+.bar{width:100%;height:6px;background:#e2e8f0;border-radius:10px;margin-top:8px}.fill{height:100%;background:#3b82f6;border-radius:10px}.fill.green{background:#22c55e}.fill.orange{background:#f59e0b}
+.card{background:white;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.event{padding:14px;border:1px solid #e2e8f0;border-radius:10px;margin:10px 0;display:flex;justify-content:space-between;align-items:center}
+.event b{font-size:13px}.event p{font-size:11px;color:#64748b;margin-top:3px}
+.badge{font-size:11px;padding:4px 10px;border-radius:20px;font-weight:600}
+.upcoming{background:#dbeafe;color:#1d4ed8}.overdue{background:#fee2e2;color:#991b1b}.today{background:#dcfce7;color:#166534}
+.btn{font-size:11px;padding:4px 8px;border:none;border-radius:4px;cursor:pointer;margin-left:5px}
+.btn-edit{background:#eff6ff;color:#2563eb}.btn-del{background:#fef2f2;color:#dc2626}
+.mini-cal{margin-top:10px}.cal-head{display:grid;grid-template-columns:repeat(7,1fr);font-size:11px;color:#64748b;text-align:center;margin-bottom:6px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.day{height:32px;display:flex;align-items:center;justify-content:center;font-size:12px;border-radius:6px;background:#f8fafc}
+.day.has-task{background:#dbeafe;color:#1d4ed8;font-weight:700;cursor:pointer}.day.today{border:2px solid #2563eb}.day.overdue{background:#fee2e2;color:#991b1b}

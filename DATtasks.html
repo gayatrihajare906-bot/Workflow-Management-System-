@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Task Management</title>
+  <link rel="stylesheet" href="DATtasks.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>Admin Panel</h2>
+  <a href="#">Dashboard</a>
+  <a href="#">Users</a>
+  <a href="#">Projects</a>
+  <a class="active" href="#">Tasks</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+  <div class="header">
+    <h2>Task Management</h2>
+    <button class="btn-create" onclick="addTask()">+ Add Task</button>
+  </div>
+
+  <!-- Stats Cards - Tujhya CSS sathi -->
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Total Tasks</h3>
+      <p>12</p>
+    </div>
+    <div class="stat-card">
+      <h3>Pending</h3>
+      <p>5</p>
+    </div>
+    <div class="stat-card">
+      <h3>In Progress</h3>
+      <p>4</p>
+    </div>
+    <div class="stat-card">
+      <h3>Completed</h3>
+      <p>3</p>
+    </div>
+  </div>
+
+  <!-- Table Card -->
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Project</th>
+          <th>Assigned To</th>
+          <th>Priority</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="taskBody">
+        <tr>
+          <td>Design Homepage</td>
+          <td>Website Development</td>
+          <td>Gayatri</td>
+          <td><span class="priority high">High</span></td>
+          <td>20 Aug 2026</td>
+          <td><span class="status pending">Pending</span></td>
+          <td>
+            <button class="btn view" onclick="viewTask(this)">View</button>
+            <button class="btn edit" onclick="editTask(this)">Edit</button>
+            <button class="btn delete" onclick="deleteTask(this)">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>API Integration</td>
+          <td>Mobile Application</td>
+          <td>Priya</td>
+          <td><span class="priority medium">Medium</span></td>
+          <td>10 Sep 2026</td>
+          <td><span class="status progress">In Progress</span></td>
+          <td>
+            <button class="btn view" onclick="viewTask(this)">View</button>
+            <button class="btn edit" onclick="editTask(this)">Edit</button>
+            <button class="btn delete" onclick="deleteTask(this)">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Testing</td>
+          <td>Website Development</td>
+          <td>Amit</td>
+          <td><span class="priority low">Low</span></td>
+          <td>15 Sep 2026</td>
+          <td><span class="status completed">Completed</span></td>
+          <td>
+            <button class="btn view" onclick="viewTask(this)">View</button>
+            <button class="btn edit" onclick="editTask(this)">Edit</button>
+            <button class="btn delete" onclick="deleteTask(this)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- JS - Khali thevaycha -->
+<script src="DATtasks.js"></script>
+</body>
+</html>

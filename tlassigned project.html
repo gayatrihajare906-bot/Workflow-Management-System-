@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assigned Projects - Team Lead</title>
+<link rel="stylesheet" href="tlassigned project.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM LEAD</h2>
+  <p>MANAGEMENT PANEL</p>
+
+  <div class="menu-head">DASHBOARD</div>
+  <div class="menu-item" onclick="showView('overview')">📊 Dashboard Overview</div>
+
+  <div class="menu-head">ASSIGNED PROJECTS</div>
+  <div class="menu-item active" id="all" onclick="filterProject('All')">📁 All Assigned Projects <span id="c-all"></span></div>
+  <div class="menu-item" id="progress" onclick="filterProject('Progress')">📈 Project Progress <span id="c-progress"></span></div>
+  <div class="menu-item" id="team" onclick="filterProject('Team')">👥 Team Members</div>
+  <div class="menu-item" id="deadlines" onclick="filterProject('Deadlines')">⏰ Deadlines <span id="c-dead"></span></div>
+  <div class="menu-item" id="summary" onclick="filterProject('Summary')">📋 Task Summary</div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div><h1 id="title">Assigned Projects</h1><p class="sub" id="sub">Manage and track all your assigned projects</p></div>
+    <button class="new-btn" onclick="addProject()">+ New Project</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>Total Assigned</small><h2 id="totalP">0</h2></div>
+    <div class="stat-card"><small>Project Progress</small><h2 id="avgP">0% Avg</h2><div class="bar"><div class="fill" id="bar-avg"></div></div></div>
+    <div class="stat-card"><small>Team Members</small><h2 id="teamC">0</h2><p style="font-size:11px;color:#64748b">Across all projects</p></div>
+    <div class="stat-card"><small>Deadlines</small><h2 id="deadC">0 Due</h2><p style="font-size:11px;color:#ef4444" id="overC">0 Overdue</p></div>
+  </div>
+
+  <div class="card" id="mainCard"></div>
+
+  <div class="grid">
+    <div class="card"><h3>📈 Project Progress</h3><div id="progressList"></div></div>
+    <div class="card"><h3>👥 Team Members by Project</h3><div id="teamList"></div></div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>⏰ Deadlines</h3><div id="deadlineList"></div></div>
+    <div class="card"><h3>📋 Task Summary</h3><div id="summaryList"></div></div>
+  </div>
+</div>
+
+<script src="tlassigned project.js"></script>
+</body>
+</html>

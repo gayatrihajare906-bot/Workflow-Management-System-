@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Tasks - Team Member</title>
+<link rel="stylesheet" href="tmtasks.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM MEMBER</h2>
+  <p>WORKSPACE</p>
+
+  <div class="menu" onclick="location.reload()">📊 Dashboard</div>
+  
+  <div class="menu-head">MY TASKS</div>
+  <div class="menu-item active" id="All" onclick="filterTasks('All')">📋 All Tasks <span id="c-All"></span></div>
+  <div class="menu-item" id="To Do" onclick="filterTasks('To Do')">📝 To Do <span id="c-To Do"></span></div>
+  <div class="menu-item" id="In Progress" onclick="filterTasks('In Progress')">🔵 In Progress <span id="c-In Progress"></span></div>
+  <div class="menu-item" id="Review" onclick="filterTasks('Review')">👁️ Review <span id="c-Review"></span></div>
+  <div class="menu-item" id="Completed" onclick="filterTasks('Completed')">✅ Completed <span id="c-Completed"></span></div>
+  <div class="menu-item" id="Overdue" onclick="filterTasks('Overdue')">⚠️ Overdue <span id="c-Overdue"></span></div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div>
+      <h1 id="title">My Tasks - All Tasks</h1>
+      <p class="sub">Track and manage your assigned tasks</p>
+    </div>
+    <button class="new-btn" onclick="addTask()">+ New Task</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>All Tasks</small><h2 id="total">0</h2></div>
+    <div class="stat-card"><small>To Do</small><h2 id="todo">0</h2><div class="bar"><div class="fill orange" id="bar-todo"></div></div></div>
+    <div class="stat-card"><small>In Progress</small><h2 id="progress">0</h2><div class="bar"><div class="fill" id="bar-progress"></div></div></div>
+    <div class="stat-card"><small>Completed</small><h2 id="done">0</h2><div class="bar"><div class="fill green" id="bar-done"></div></div></div>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead><tr><th>Task Name</th><th>Status</th><th>Project</th><th>Priority</th><th>Deadline</th><th>Actions</th></tr></thead>
+      <tbody id="taskBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="tmtasks.js"></script>
+</body>
+</html>

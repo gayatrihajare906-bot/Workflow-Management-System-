@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard - Workflow System</title>
+<link rel="stylesheet" href="DATreport.css">
+<script src="DATreport.js"></script>
+
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Admin Panel</h2>
+  <a class="active" onclick="openTab('report',this)">Report</a>
+  <a onclick="openTab('users',this)">Users</a>
+  <a onclick="openTab('projects',this)">Projects - Deadlines</a>
+  <a onclick="openTab('tasks',this)">Tasks</a>
+  <a onclick="openTab('notif',this)">Notifications 🔔</a>
+</div>
+
+<div class="main">
+  <div class="header">
+    <h2 id="pageTitle">Dashboard Overview</h2>
+    <button class="btn-add" onclick="createRecord()">+ Create Record</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="card active">
+    <h3>Overall Work Summary</h3>
+    <p>Total Projects: 1 | Total Tasks: 12 | Users: 3 | Pending Deadlines: 2</p>
+  </div>
+
+  <!-- USERS -->
+  <div id="users" class="card">
+    <h3>Users Management</h3>
+    <table>
+      <thead><tr><th>Name</th><th>Role</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>Gayatri chavan</td><td>Project Manager</td><td><button class="btn del" onclick="deleteRecord(this)">Delete</button></td></tr>
+        <tr><td>Gayatri chavan</td><td>Team Leader</td><td><button class="btn del" onclick="deleteRecord(this)">Delete</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PROJECTS -->
+  <div id="projects" class="card">
+    <h3>Project Deadlines Data</h3>
+    <table>
+      <thead><tr><th>Project Name</th><th>Manager</th><th>Progress</th><th>Deadline</th><th>Status</th><th>Action</th></tr></thead>
+      <tbody id="projectBody">
+        <tr><td>workflow management system</td><td>gayatri</td><td>10%</td><td>22 Aug 2026</td><td><span class="badge low">Urgent</span></td><td><button class="btn view" onclick="viewRecord(this)">View</button> <button class="btn edit" onclick="editRecord(this)">Edit</button> <button class="btn del" onclick="deleteRecord(this)">Delete</button></td></tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TASKS -->
+  <div id="tasks" class="card">
+    <h3>Task Data</h3>
+    <table>
+      <thead><tr><th>Task</th><th>Project</th><th>Assigned To</th><th>Due Date</th><th>Action</th></tr></thead>
+      <tbody id="taskBody">
+        <tr><td>dashboard Design</td><td>Website</td><td>gayatri</td><td>28 Aug 2026</td><td><button class="btn view" onclick="viewRecord(this)">View</button> <button class="btn del" onclick="deleteRecord(this)">Delete</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NOTIFICATIONS -->
+  <div id="notif" class="card">
+    <h3>Notifications - Deadline Alerts</h3>
+    <p>🔴 Website Development deadline tomorrow</p>
+    <p>🔵 New Task assigned to Priya</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

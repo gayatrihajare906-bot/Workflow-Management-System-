@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Workflow System</title>
+  <link rel="stylesheet" href="DATuser.css">
+  <script src="DATuser.js"></script>
+</head>
+<body>
+
+  <!-- SIDE MENU -->
+  <div class="sidebar">
+    <h2>Workflow</h2>
+    
+    <a href="#" class="active" onclick="showUsers()">Users</a>
+    
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+    <div class="header">
+      <h1>User Management</h1>
+      <button class="btn btn-add" onclick="addUser()">+ Add User</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody">
+        <tr>
+          <td>1</td>
+          <td>Gayatri chavan</td>
+          <td>gayatri@mail.com</td>
+          <td>
+            <select onchange="assignRole(1, this.value)">
+              <option>Admin</option>
+              <option selected>Project Manager</option>
+              <option>Team Leader</option>
+              <option>Team Member</option>
+            </select>
+          </td>
+          <td><span class="status-active">Active</span></td>
+          <td>
+            <button class="btn btn-edit" onclick="editUser(1)">Edit</button>
+            <button class="btn btn-delete" onclick="deleteUser(1)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<script src="DATuser.js"></script>
+</body>
+</html>

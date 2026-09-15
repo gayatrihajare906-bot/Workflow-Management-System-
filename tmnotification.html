@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Member - Notifications</title>
+<link rel="stylesheet" href="tmnotification.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>TEAM MEMBER</h2>
+  <p>WORKSPACE</p>
+
+  <div class="menu">📊 Dashboard</div>
+
+  <div class="menu-head">MY TASKS</div>
+  <div class="menu-item">📋 All Tasks</div>
+
+  <div class="menu-head">MY PROJECTS</div>
+  <div class="menu-item">📁 Assigned Projects</div>
+
+  <div class="menu-head">ACCOUNT</div>
+  <div class="menu-item active" id="all" onclick="filterNoti('all')">🔔 All Notifications <span id="c-all"></span></div>
+  <div class="menu-item" id="unread" onclick="filterNoti('unread')">📩 Unread <span id="c-unread"></span></div>
+  <div class="menu-item" id="mentions" onclick="filterNoti('mentions')">👤 Mentions <span id="c-ment"></span></div>
+</div>
+
+<div class="main">
+  <div class="top">
+    <div>
+      <h1 id="title">Notifications</h1>
+      <p class="sub">Stay updated with your team activities</p>
+    </div>
+    <div>
+      <button class="new-btn" onclick="markAllRead()">✓ Mark all as read</button>
+      <button class="new-btn secondary" onclick="addNoti()">+ New</button>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><small>Total Notifications</small><h2 id="totalCount">0</h2></div>
+    <div class="stat-card"><small>Unread</small><h2 id="unreadCount">0</h2><div class="bar"><div class="fill orange" id="bar-unread"></div></div></div>
+    <div class="stat-card"><small>Mentions</small><h2 id="mentionCount">0</h2></div>
+    <div class="stat-card"><small>Today</small><h2 id="todayCount">0</h2><div class="bar"><div class="fill green" style="width:70%"></div></div></div>
+  </div>
+
+  <div class="card">
+    <h3 id="tableHead">🔔 Recent Notifications</h3>
+    <div id="notiBody"></div>
+  </div>
+</div>
+
+<script src="tmnotification.js"></script>
+</body>
+</html>

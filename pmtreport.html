@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Manager Dashboard</title>
+    <link rel="stylesheet" href="pmtreport.css">
+    <script src="pmtreport.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>PM Dashboard</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#">📊 Overview</a></li>
+                <li><a href="#">📋 Tasks</a></li>
+                <li><a href="#">👥 Team</a></li>
+                <li><a href="#">📁 Reports</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Reports Dashboard</h1>
+                <div class="user-profile">👤 Project Manager</div>
+            </header>
+
+            <section class="kpi-cards">
+                <div class="card">
+                    <h3>Task Completion</h3>
+                    <p class="card-value" id="task-completion">78%</p>
+                </div>
+                <div class="card">
+                    <h3>Team Completion</h3>
+                    <p class="card-value" id="team-completion">85%</p>
+                </div>
+                <div class="card danger">
+                    <h3>Overdue Tasks</h3>
+                    <p class="card-value" id="overdue-tasks">12</p>
+                </div>
+            </section>
+
+            <section class="reports-section">
+                <div class="section-header">
+                    <h2>Generated Reports</h2>
+                    <button class="btn btn-primary" onclick="generateNewReport()">+ New Report</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Report Name</th>
+                                <th>Type</th>
+                                <th>Date Generated</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reports-table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    
+</body>
+</html>

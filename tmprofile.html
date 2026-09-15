@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Team Member Profile</title>
+<link rel="stylesheet" href="tmprofile.css">
+</head>
+<body>
+<div class="sidebar">
+  <h2>TEAM MEMBER</h2>
+  <p>WORKSPACE</p>
+  <div class="menu-head">ACCOUNT</div>
+  <div class="menu-item active">👤 My Profile</div>
+</div>
+<div class="main">
+  <div class="top">
+    <h1>My Profile</h1>
+    <button class="btn" onclick="editProfile()" id="editBtn">Edit</button>
+  </div>
+  <div class="card">
+    <div class="avatar" id="avatar">GC</div>
+    <h2 id="pName">Gayatri Chavan</h2>
+    <p id="pRole">UI/UX Designer</p>
+    <input id="name" value="Gayatri Chavan" disabled>
+    <input id="role" value="UI/UX Designer" disabled>
+    <input id="email" value="gayatri@taskflow.com" disabled>
+  </div>
+</div>
+<script src="tmprofile.js"></script>
+</body>
+</html>
